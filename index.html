@@ -2423,6 +2423,862 @@
       background: #E2E8F0;
     }
 
+  
+    /* =========================================================
+       V2.0 KAKAOTALK / CHATGPT ULTRA-CLEAN MOBILE STYLES
+       ========================================================= */
+    :root {
+      --header-height: 54px;
+    }
+
+    header {
+      min-height: var(--header-height);
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border-subtle);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .brand-title {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: #0F172A;
+      cursor: pointer;
+      user-select: none;
+    }
+    .brand-title .brand-tag {
+      background: #4F46E5;
+      color: white;
+      font-size: 0.72rem;
+      padding: 2px 7px;
+      border-radius: 6px;
+      font-weight: 700;
+    }
+    .header-right-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-nav-compact {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-pill);
+      padding: 7px 13px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #334155;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+    }
+    .btn-nav-compact:hover {
+      background: #E2E8F0;
+    }
+
+    /* Mobile Quick Menu Drawer */
+    .mobile-menu-drawer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 300;
+      display: flex;
+    }
+    .mobile-menu-backdrop {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 23, 42, 0.5);
+      backdrop-filter: blur(4px);
+    }
+    .mobile-menu-content {
+      position: relative;
+      margin-left: auto;
+      width: 82%;
+      max-width: 320px;
+      height: 100%;
+      background: #FFFFFF;
+      box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      z-index: 301;
+      animation: slideInRight 0.22s ease-out;
+    }
+    @keyframes slideInRight {
+      from { transform: translateX(100%); }
+      to { transform: translateX(0); }
+    }
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 1.1rem;
+      color: #0F172A;
+    }
+    .btn-close-menu {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      color: #64748B;
+      cursor: pointer;
+    }
+    .mobile-menu-items {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 16px;
+      overflow-y: auto;
+    }
+    .menu-item {
+      background: #F8FAFC;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 12px 14px;
+      text-align: left;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #1E293B;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: background 0.15s ease;
+    }
+    .menu-item:hover {
+      background: #EEF2FF;
+      color: #4338CA;
+    }
+
+    /* 3 Big Quick-Start Cards for Home */
+    .home-hero-compact {
+      text-align: center;
+      margin: 10px 0 18px;
+    }
+    .home-hero-compact h1 {
+      font-size: 1.65rem;
+      color: #0F172A;
+      margin-bottom: 6px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .home-hero-compact p {
+      font-size: 0.95rem;
+      color: #64748B;
+    }
+    .quick-start-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .mode-card {
+      background: #FFFFFF;
+      border-radius: 22px;
+      padding: 22px;
+      border: 2px solid var(--border-subtle);
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+    .mode-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.09);
+    }
+    .kid-mode-card {
+      border-color: #86EFAC;
+      background: linear-gradient(135deg, #FFFFFF 50%, #F0FDF4 100%);
+    }
+    .kid-mode-card:hover { border-color: #10B981; }
+    .adult-mode-card {
+      border-color: #A5B4FC;
+      background: linear-gradient(135deg, #FFFFFF 50%, #EEF2FF 100%);
+    }
+    .adult-mode-card:hover { border-color: #6366F1; }
+    .story-mode-card {
+      border-color: #FDA4AF;
+      background: linear-gradient(135deg, #FFFFFF 50%, #FFF1F2 100%);
+    }
+    .story-mode-card:hover { border-color: #F43F5E; }
+
+    .mode-card-badge {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 4px 11px;
+      border-radius: var(--radius-pill);
+    }
+    .kid-mode-card .mode-card-badge { background: #DCFCE7; color: #15803D; }
+    .adult-mode-card .mode-card-badge { background: #E0E7FF; color: #4338CA; }
+    .story-mode-card .mode-card-badge { background: #FFE4E6; color: #BE123C; }
+
+    .mode-card-body-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .mode-card-big-icon {
+      font-size: 3.4rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .mode-card-info h2 {
+      font-size: 1.35rem;
+      color: #0F172A;
+      margin-bottom: 4px;
+      font-weight: 800;
+    }
+    .mode-card-info p {
+      font-size: 0.92rem;
+      color: #475569;
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+    .mode-chips-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .mode-chip-pill {
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: rgba(15, 23, 42, 0.05);
+      color: #475569;
+    }
+    .btn-mode-big-action {
+      border: none;
+      border-radius: 14px;
+      padding: 14px;
+      font-size: 1.05rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: white;
+      transition: all 0.15s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .btn-kid-action { background: #059669; }
+    .btn-kid-action:hover { background: #047857; }
+    .btn-adult-action { background: #4F46E5; }
+    .btn-adult-action:hover { background: #4338CA; }
+    .btn-story-action { background: #BE185D; }
+    .btn-story-action:hover { background: #9D174D; }
+
+    /* Mini-Games Accordion */
+    .games-accordion-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      margin-bottom: 24px;
+      overflow: hidden;
+    }
+    .games-accordion-header {
+      padding: 14px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      background: #F8FAFC;
+    }
+    .games-chips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 8px;
+    }
+    .game-quick-chip {
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #334155;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.12s ease;
+    }
+    .game-quick-chip:hover {
+      background: #EEF2FF;
+      border-color: #C7D2FE;
+      color: #4338CA;
+    }
+
+    /* KakaoTalk / ChatGPT Style Chat Room */
+    .roleplay-room {
+      display: flex;
+      flex-direction: column;
+      height: calc(100vh - var(--header-height));
+      max-width: 720px;
+      margin: 0 auto;
+      background: #F8FAFC;
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .roleplay-room-header {
+      padding: 12px 16px;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+      gap: 10px;
+    }
+    .chat-header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      flex: 1;
+      min-width: 0;
+    }
+    .chat-avatar-large {
+      font-size: 2.2rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .chat-title-group {
+      flex: 1;
+      min-width: 0;
+    }
+    .chat-title-group h3 {
+      font-size: 1.08rem;
+      color: #0F172A;
+      font-weight: 800;
+      margin-bottom: 2px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .chat-switch-tag {
+      font-size: 0.75rem;
+      color: #4F46E5;
+      background: #EEF2FF;
+      padding: 2px 7px;
+      border-radius: 6px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .chat-turn-indicator {
+      font-size: 0.8rem;
+      color: #64748B;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .chat-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+    .btn-chat-icon {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.05rem;
+      cursor: pointer;
+      color: #334155;
+      transition: all 0.15s ease;
+    }
+    .btn-chat-icon:hover { background: #E2E8F0; }
+
+    /* Chat Messages Stream (Scroll Area) */
+    .roleplay-chat-stream {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      -webkit-overflow-scrolling: touch;
+      background: #F8FAFC;
+    }
+    .roleplay-bubble-row {
+      display: flex;
+      gap: 8px;
+      max-width: 90%;
+    }
+    .roleplay-bubble-row.partner {
+      align-self: flex-start;
+    }
+    .roleplay-bubble-row.user {
+      align-self: flex-end;
+      flex-direction: row-reverse;
+    }
+    .roleplay-bubble-box {
+      border-radius: 18px;
+      padding: 14px 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      position: relative;
+    }
+    .roleplay-bubble-row.partner .roleplay-bubble-box {
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-bottom-left-radius: 4px;
+    }
+    .roleplay-bubble-row.user .roleplay-bubble-box {
+      background: #4F46E5;
+      color: #FFFFFF;
+      border-bottom-right-radius: 4px;
+    }
+    .bubble-en {
+      font-family: var(--font-en);
+      font-size: 1.22rem !important;
+      font-weight: 700;
+      line-height: 1.45;
+      margin-bottom: 4px;
+    }
+    .roleplay-bubble-row.partner .bubble-en { color: #0F172A; }
+    .roleplay-bubble-row.user .bubble-en { color: #FFFFFF; }
+    .bubble-ko {
+      font-size: 0.92rem;
+      line-height: 1.4;
+    }
+    .roleplay-bubble-row.partner .bubble-ko { color: #64748B; }
+    .roleplay-bubble-row.user .bubble-ko { color: #E0E7FF; }
+
+    /* Ultra-Clean Walkie-Talkie Bottom Dock */
+    .roleplay-dock {
+      background: #FFFFFF;
+      border-top: 1px solid var(--border-subtle);
+      padding: 12px 16px 18px;
+      flex-shrink: 0;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.03);
+    }
+    .roleplay-hints-bar {
+      margin-bottom: 10px;
+    }
+    .hints-label {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: #64748B;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .hints-chips-list {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .hints-chips-list::-webkit-scrollbar { display: none; }
+    .hint-chip {
+      background: #F1F5F9;
+      border: 1.5px solid #CBD5E1;
+      border-radius: var(--radius-pill);
+      padding: 8px 14px;
+      font-size: 0.95rem;
+      font-family: var(--font-en);
+      font-weight: 700;
+      color: #1E293B;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hint-chip:hover {
+      background: #EEF2FF;
+      border-color: #818CF8;
+      color: #4338CA;
+      transform: translateY(-1px);
+    }
+
+    /* Big Walkie-Talkie Mic Button */
+    .roleplay-walkie-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-walkie-talkie-large {
+      flex: 1;
+      background: #0F172A;
+      color: #FFFFFF;
+      border: none;
+      border-radius: var(--radius-pill);
+      padding: 15px 20px;
+      font-size: 1.08rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.2);
+      transition: all 0.18s ease;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .btn-walkie-talkie-large:hover {
+      background: #1E293B;
+      transform: translateY(-1px);
+    }
+    .btn-walkie-talkie-large.listening {
+      background: #DC2626 !important;
+      animation: micListeningPulse 1.2s infinite;
+    }
+
+    /* Expandable Text Input Bar */
+    .roleplay-text-drawer {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+      animation: fadeIn 0.15s ease;
+    }
+    .roleplay-text-input {
+      flex: 1;
+      border: 2px solid var(--border-subtle);
+      border-radius: var(--radius-pill);
+      padding: 12px 18px;
+      font-family: var(--font-en);
+      font-size: 1rem;
+      outline: none;
+      background: #FFFFFF;
+      transition: border 0.15s ease;
+    }
+    .roleplay-text-input:focus {
+      border-color: var(--primary);
+    }
+    .roleplay-btn-send {
+      background: #4F46E5;
+      color: #FFFFFF;
+      border: none;
+      border-radius: var(--radius-pill);
+      padding: 12px 20px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      cursor: pointer;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(79, 70, 229, 0.25);
+    }
+
+    
+    /* 5-Level Roleplay Selector & Modal Enhancements */
+    .scenario-level-filter-bar {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .scenario-level-filter-bar::-webkit-scrollbar { display: none; }
+    .sc-lvl-filter {
+      flex-shrink: 0;
+      padding: 7px 13px;
+      border-radius: var(--radius-pill);
+      border: 1.5px solid var(--border-subtle);
+      background: #FFFFFF;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .sc-lvl-filter:hover {
+      background: var(--surface-subtle);
+      border-color: var(--border-focus);
+    }
+    .sc-lvl-filter.active {
+      background: #4F46E5;
+      color: #FFFFFF;
+      border-color: #4F46E5;
+      box-shadow: 0 2px 8px rgba(79, 70, 229, 0.25);
+    }
+    .sc-lvl-filter[data-lvl="1"].active { background: #059669; border-color: #059669; }
+    .sc-lvl-filter[data-lvl="2"].active { background: #0D9488; border-color: #0D9488; }
+    .sc-lvl-filter[data-lvl="3"].active { background: #0284C7; border-color: #0284C7; }
+    .sc-lvl-filter[data-lvl="4"].active { background: #4F46E5; border-color: #4F46E5; }
+    .sc-lvl-filter[data-lvl="5"].active { background: #7C3AED; border-color: #7C3AED; }
+
+    .modal-level-banner {
+      background: #F8FAFC;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .modal-level-banner b { color: #0F172A; }
+    .modal-level-banner .banner-speed-tag {
+      background: #EEF2FF;
+      color: #4F46E5;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-weight: 700;
+    }
+
+    .scenario-card-lvl-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 4px;
+      margin-right: 6px;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+    .scenario-card-lvl-badge.lvl-1 { background: #ECFDF5; color: #059669; border: 1px solid #A7F3D0; }
+    .scenario-card-lvl-badge.lvl-2 { background: #F0FDFA; color: #0D9488; border: 1px solid #99F6E4; }
+    .scenario-card-lvl-badge.lvl-3 { background: #F0F9FF; color: #0284C7; border: 1px solid #BAE6FD; }
+    .scenario-card-lvl-badge.lvl-4 { background: #EEF2FF; color: #4F46E5; border: 1px solid #C7D2FE; }
+    .scenario-card-lvl-badge.lvl-5 { background: #FAF5FF; color: #7C3AED; border: 1px solid #DDD6FE; }
+
+    /* Home card level chips */
+    .home-card-level-chips {
+      display: flex;
+      gap: 6px;
+      margin-top: 4px;
+      flex-wrap: wrap;
+    }
+    .home-lvl-pill {
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: #F1F5F9;
+      color: #475569;
+      border: 1px solid #CBD5E1;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .home-lvl-pill:hover {
+      transform: translateY(-1px);
+      filter: brightness(0.95);
+    }
+    .home-lvl-pill.lvl1 { background: #ECFDF5; color: #059669; border-color: #A7F3D0; }
+    .home-lvl-pill.lvl2 { background: #F0FDFA; color: #0D9488; border-color: #99F6E4; }
+    .home-lvl-pill.lvl3 { background: #F0F9FF; color: #0284C7; border-color: #BAE6FD; }
+    .home-lvl-pill.lvl4 { background: #EEF2FF; color: #4F46E5; border-color: #C7D2FE; }
+    .home-lvl-pill.lvl5 { background: #FAF5FF; color: #7C3AED; border-color: #DDD6FE; }
+
+    /* Active Chat Header Level Switcher Button */
+    .chat-level-switcher-btn {
+      background: #ECFDF5;
+      color: #059669;
+      border: 1.5px solid #A7F3D0;
+      border-radius: var(--radius-pill);
+      padding: 3px 9px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+    .chat-level-switcher-btn:hover {
+      filter: brightness(0.95);
+      transform: scale(1.02);
+    }
+    .chat-level-switcher-btn[data-lvl="1"] { background: #ECFDF5; color: #059669; border-color: #A7F3D0; }
+    .chat-level-switcher-btn[data-lvl="2"] { background: #F0FDFA; color: #0D9488; border-color: #99F6E4; }
+    .chat-level-switcher-btn[data-lvl="3"] { background: #F0F9FF; color: #0284C7; border-color: #BAE6FD; }
+    .chat-level-switcher-btn[data-lvl="4"] { background: #EEF2FF; color: #4F46E5; border-color: #C7D2FE; }
+    .chat-level-switcher-btn[data-lvl="5"] { background: #FAF5FF; color: #7C3AED; border-color: #DDD6FE; }
+
+    /* Chat Level Dropdown Menu */
+    .roleplay-level-dropdown {
+      position: absolute;
+      top: 62px;
+      left: 16px;
+      background: #FFFFFF;
+      border: 1px solid var(--border-card);
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      padding: 8px;
+      z-index: 1000;
+      width: 320px;
+      max-width: calc(100vw - 32px);
+      animation: modalFadeIn 0.2s ease;
+    }
+    .level-dropdown-header {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      padding: 6px 10px 8px;
+      border-bottom: 1px solid var(--border-subtle);
+      margin-bottom: 4px;
+    }
+    .level-dropdown-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.12s ease;
+    }
+    .level-dropdown-item:hover {
+      background: var(--surface-subtle);
+    }
+    .level-dropdown-item b {
+      display: block;
+      font-size: 0.88rem;
+      color: #0F172A;
+    }
+    .level-dropdown-item p {
+      font-size: 0.75rem;
+      color: #64748B;
+      margin: 0;
+    }
+
+    /* System Notice Bubble in Chat */
+    .chat-system-notice {
+      text-align: center;
+      margin: 10px auto;
+      background: #EEF2FF;
+      border: 1px dashed #A5B4FC;
+      border-radius: 12px;
+      padding: 8px 14px;
+      font-size: 0.82rem;
+      color: #4338CA;
+      max-width: 90%;
+      animation: modalFadeIn 0.2s ease;
+    }
+
+    
+    /* TTS Voice Studio Styles */
+    .tts-option-card {
+      background: #F8FAFC;
+      border: 2px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 12px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .tts-option-card:hover {
+      background: #F1F5F9;
+      border-color: #CBD5E1;
+    }
+    .tts-option-card.active {
+      background: #EEF2FF;
+      border-color: #6366F1;
+      box-shadow: 0 2px 8px rgba(99, 102, 241, 0.15);
+    }
+    .tts-option-card b {
+      display: block;
+      font-size: 0.92rem;
+      color: #0F172A;
+      margin-bottom: 2px;
+    }
+    .tts-option-card p {
+      font-size: 0.78rem;
+      color: #64748B;
+      margin: 0;
+      line-height: 1.35;
+    }
+    .tts-speed-btn {
+      flex: 1;
+      padding: 9px 6px;
+      border-radius: 8px;
+      border: 1.5px solid var(--border-subtle);
+      background: #FFFFFF;
+      color: #475569;
+      font-weight: 700;
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .tts-speed-btn:hover {
+      background: #F8FAFC;
+    }
+    .tts-speed-btn.active {
+      background: #4F46E5;
+      color: #FFFFFF;
+      border-color: #4F46E5;
+    }
+
+    /* Scenario Picker Modal */
+    .scenario-picker-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+      max-height: 480px;
+      overflow-y: auto;
+      padding: 4px;
+    }
+    .scenario-select-card {
+      background: #F8FAFC;
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 14px;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .scenario-select-card:hover {
+      background: #EEF2FF;
+      border-color: #818CF8;
+      transform: translateY(-1px);
+    }
+    .scenario-select-avatar {
+      font-size: 2.2rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .scenario-select-info h4 {
+      font-size: 1.02rem;
+      color: #0F172A;
+      margin-bottom: 3px;
+    }
+    .scenario-select-info p {
+      font-size: 0.82rem;
+      color: #64748B;
+      line-height: 1.35;
+    }
+
   </style>
 </head>
 <body>
@@ -2430,202 +3286,145 @@
   <canvas id="confettiCanvas"></canvas>
   <div id="feedbackBanner" class="feedback-banner">🎉 Great Job!</div>
 
-  <!-- Header -->
+  <!-- Header (Mobile-First 1-Row Compact) -->
   <header>
     <div class="brand-title" onclick="app.showHome()">
-      <span class="brand-tag">v1.0</span>
-      <span class="brand-text">온가족 영어 라운지</span>
+      <span class="brand-tag">v2.0</span>
+      <span class="brand-text">🌟 온가족 영어</span>
     </div>
-    <div class="top-stats">
-      <div class="stat-pill star-counter">
+    <div class="header-right-actions">
+      <div class="stat-pill star-counter" title="모은 별">
         <span>⭐</span>
         <span id="starCountDisplay">0</span>
       </div>
-      <div class="stat-pill streak-badge">
-        <span id="streakCounterDisplay">1일 연속 🔥</span>
-      </div>
-      <div class="stat-pill level-badge">
-        <span id="levelDisplay">Lv.1 꼬마 탐험가 🐣</span>
-      </div>
-      <button class="btn-nav adult-highlight" onclick="app.openAdultLounge()">
-        <span>☕</span>
-        <span>성인 라운지</span>
+      <div class="stat-pill streak-badge" id="streakCounterDisplay" style="display:none;">1일 연속 🔥</div>
+      <div class="stat-pill level-badge" id="levelDisplay" style="display:none;">Lv.1 꼬마 탐험가 🐣</div>
+      <button class="btn-nav-compact" id="btnHeaderApiKey" onclick="app.openApiKeyModal()" title="무료 Gemini AI 실시간 연결">
+        <span>🔑</span> <span id="headerApiKeyStatus">AI 연결</span>
       </button>
-      <button class="btn-nav story-highlight" onclick="app.openStoryMaker()">
-        <span>📖</span>
-        <span>마법 동화</span>
+      <button class="btn-nav-compact" onclick="app.toggleMobileMenu()" title="전체 메뉴">
+        <span>☰ 메뉴</span>
       </button>
-      <button class="btn-nav" id="btnHeaderApiKey" onclick="app.openApiKeyModal()">
-        <span>🔑</span>
-        <span id="headerApiKeyStatus">Gemini AI</span>
-      </button>
-      <button class="btn-nav" onclick="app.openStickerModal()">
-        <span>🎨</span>
-        <span>스티커북</span>
-      </button>
-      <button class="btn-nav" onclick="app.openParentGuide()">
-        <span>💡</span>
-        <span>학습 팁</span>
-      </button>
-      <button class="btn-nav pwa-install-btn" id="btnPwaInstall" style="display:none; background:#0F172A; color:white;">
-        <span>📲</span>
-        <span>앱 설치</span>
-      </button>
+      <button class="btn-nav pwa-install-btn" id="btnPwaInstall" style="display:none;"></button>
     </div>
   </header>
 
+  <!-- Mobile Menu Drawer -->
+  <div id="mobileQuickMenu" class="mobile-menu-drawer" style="display:none;">
+    <div class="mobile-menu-backdrop" onclick="app.toggleMobileMenu()"></div>
+    <div class="mobile-menu-content">
+      <div class="mobile-menu-header">
+        <b>⚙️ 전체 메뉴</b>
+        <button class="btn-close-menu" onclick="app.toggleMobileMenu()">✕</button>
+      </div>
+      <div class="mobile-menu-items">
+        <button class="menu-item" onclick="app.showHome(); app.toggleMobileMenu();">🏠 홈으로 가기</button>
+        <button class="menu-item" onclick="app.startKidChatQuick(); app.toggleMobileMenu();">🧒 아이 영어 톡 (7세·10세)</button>
+        <button class="menu-item" onclick="app.startAdultChatQuick(); app.toggleMobileMenu();">☕ 성인 실전 회화 (카페/여행)</button>
+        <button class="menu-item" onclick="app.openStoryMaker(); app.toggleMobileMenu();">📖 마법 영어 동화 제작소</button>
+        <button class="menu-item" onclick="app.openAdultLounge(); app.toggleMobileMenu();">☕ 성인 100문장 & 핵심패턴</button>
+        <button class="menu-item" onclick="app.openStickerModal(); app.toggleMobileMenu();">🎨 나의 스티커북</button>
+        <button class="menu-item" onclick="app.openParentGuide(); app.toggleMobileMenu();">💡 온가족 영어 학습 팁</button>
+        <button class="menu-item" onclick="app.openTtsSettingsModal(); app.toggleMobileMenu();">🔊 원어민 발음 & 목소리 설정</button>
+        <button class="menu-item" onclick="app.openMicHelpModal(); app.toggleMobileMenu();">🎙️ 마이크 & 스마트폰 가이드</button>
+      </div>
+    </div>
+  </div>
+
   <main>
-    <!-- Screen 1: Home Mode Selection -->
+    <!-- Screen 1: Home Mode Selection (Ultra-Simple 3 Big Choices) -->
     <section id="screenHome" class="view-screen active">
-      <div class="hero-banner">
-        <div class="hero-badge">✨ 5단계 맞춤 커리큘럼 + 성인 회화</div>
-        <h1>영어가 즐거워지는 스마트 러닝 라운지</h1>
-        <p>기초 파닉스부터 문맥 퍼즐, 실전 회화, 주니어 영작문, 성인 생활영어까지 한눈에 학습해요</p>
+      <div class="home-hero-compact">
+        <h1>누구와 대화해 볼까요?</h1>
+        <p>터치 한 번으로 AI 원어민 친구와 바로 대화를 시작해요!</p>
       </div>
 
-      <div class="age-cards-grid">
-        <!-- LEVEL 1: 기초 파닉스 & 사이트워드 -->
-        <div class="age-card card-level-1" onclick="app.startLevel1()">
-          <div>
-            <div class="card-top-row">
-              <span class="badge-level">LEVEL 1 · Phonics</span>
-              <span class="card-icon-clean">🌱</span>
-            </div>
-            <h2>파닉스 & 사이트워드</h2>
-            <p>첫소리 음가 규칙과 핵심 사이트워드 순간 인지 훈련</p>
-            <div class="card-tags-row">
-              <span class="card-tag">🔤 첫소리 음가</span>
-              <span class="card-tag">🎧 듣기 변별</span>
-              <span class="card-tag">🎈 풍선 팡팡</span>
+      <div class="quick-start-grid">
+        <!-- 1. 🧒 아이 영어 톡 (7세 / 10세) -->
+        <div class="mode-card kid-mode-card" onclick="app.startKidChatQuick()">
+          <span class="mode-card-badge">🧒 7세 · 10세 눈높이 추천</span>
+          <div class="mode-card-body-row">
+            <span class="mode-card-big-icon">🐰</span>
+            <div class="mode-card-info">
+              <h2>아이 영어 톡 (Kids Talk)</h2>
+              <p>토끼 버디 🐰, 아기곰 테디 🧸와 쉬운 영어로 놀아요!</p>
+              <div class="mode-chips-list">
+                <span class="mode-chip-pill">🌟 1~3단어 쉬운 대화</span>
+                <span class="mode-chip-pill">🎙️ 무전기 말하기</span>
+                <span class="mode-chip-pill">💬 누르면 자동 발화</span>
+              </div>
+              <div class="home-card-level-chips" onclick="event.stopPropagation()">
+                <span class="home-lvl-pill lvl1" onclick="app.startChatAtLevel(1)" title="1~3단어 기초">🌱 Lv.1 기초</span>
+                <span class="home-lvl-pill lvl2" onclick="app.startChatAtLevel(2)" title="3~5단어 초급">🌿 Lv.2 초급</span>
+                <span class="home-lvl-pill lvl3" onclick="app.startChatAtLevel(3)" title="5~7단어 일상">🍀 Lv.3 일상</span>
+              </div>
             </div>
           </div>
-          <button class="btn-card-action">학습 시작 <span class="arr">→</span></button>
+          <button class="btn-mode-big-action btn-kid-action">대화 바로 시작하기 🚀</button>
         </div>
 
-        <!-- LEVEL 2: 어순 감각 & 문맥 퍼즐 -->
-        <div class="age-card card-level-2" onclick="app.startLevel2()">
-          <div>
-            <div class="card-top-row">
-              <span class="badge-level">LEVEL 2 · Sentences</span>
-              <span class="card-icon-clean">🌿</span>
-            </div>
-            <h2>어순 감각 & 문맥 퍼즐</h2>
-            <p>3~4단어 블록 퍼즐과 메모리 카드로 문장 구조 형성</p>
-            <div class="card-tags-row">
-              <span class="card-tag">🧩 문맥 퍼즐</span>
-              <span class="card-tag">🃏 짝맞추기</span>
-              <span class="card-tag">🎙️ 마이크 발음</span>
+        <!-- 2. ☕ 성인 실전 회화 (일상 & 여행) -->
+        <div class="mode-card adult-mode-card" onclick="app.startAdultChatQuick()">
+          <span class="mode-card-badge">☕ 일상 · 해외여행 · 비즈니스</span>
+          <div class="mode-card-body-row">
+            <span class="mode-card-big-icon">☕</span>
+            <div class="mode-card-info">
+              <h2>성인 실전 회화 (Adult Talk)</h2>
+              <p>카페, 공항, 호텔에서 원어민 파트너와 실시간 티키타카!</p>
+              <div class="mode-chips-list">
+                <span class="mode-chip-pill">✈️ 공항/카페/호텔</span>
+                <span class="mode-chip-pill">💡 실시간 원어민 팁</span>
+                <span class="mode-chip-pill">무제한 대화</span>
+              </div>
+              <div class="home-card-level-chips" onclick="event.stopPropagation()">
+                <span class="home-lvl-pill lvl3" onclick="app.startChatAtLevel(3)" title="5~7단어 일상">🍀 Lv.3 일상</span>
+                <span class="home-lvl-pill lvl4" onclick="app.startChatAtLevel(4)" title="원어민 여행/생활">🌳 Lv.4 여행</span>
+                <span class="home-lvl-pill lvl5" onclick="app.startChatAtLevel(5)" title="비즈니스 & 토론">👑 Lv.5 비즈니스</span>
+              </div>
             </div>
           </div>
-          <button class="btn-card-action">학습 시작 <span class="arr">→</span></button>
+          <button class="btn-mode-big-action btn-adult-action">실전 회화 시작하기 💬</button>
         </div>
 
-        <!-- LEVEL 3: 일상 회화 & 스피드 퀴즈 -->
-        <div class="age-card card-level-3" onclick="app.startLevel3()">
-          <div>
-            <div class="card-top-row">
-              <span class="badge-level">LEVEL 3 · Expressions</span>
-              <span class="card-icon-clean">🍀</span>
-            </div>
-            <h2>일상 회화 & 스피드 퀴즈</h2>
-            <p>초등 교과 12개 실전 퀴즈와 5~6단어 문장 완성</p>
-            <div class="card-tags-row">
-              <span class="card-tag">⚡ 스피드 퀴즈</span>
-              <span class="card-tag">🧩 문장 빌더</span>
-              <span class="card-tag">🎙️ 회화 섀도잉</span>
+        <!-- 3. 📖 마법 영어 동화 제작소 -->
+        <div class="mode-card story-mode-card" onclick="app.openStoryMaker()">
+          <span class="mode-card-badge">📖 오디오 동화책</span>
+          <div class="mode-card-body-row">
+            <span class="mode-card-big-icon">🪄</span>
+            <div class="mode-card-info">
+              <h2>마법 영어 동화 제작소</h2>
+              <p>내 아이디어로 만드는 5단계 재미있는 그림 동화책</p>
+              <div class="mode-chips-list">
+                <span class="mode-chip-pill">🔊 원어민 낭독</span>
+                <span class="mode-chip-pill">✨ 난이도 1~5단계</span>
+                <span class="mode-chip-pill">어휘 퀴즈</span>
+              </div>
             </div>
           </div>
-          <button class="btn-card-action">학습 시작 <span class="arr">→</span></button>
+          <button class="btn-mode-big-action btn-story-action">동화 만들기 📖</button>
         </div>
+      </div>
 
-        <!-- LEVEL 4: 단락 독해 & 스펠링 마스터 -->
-        <div class="age-card card-level-4" onclick="app.startLevel4()">
-          <div>
-            <div class="card-top-row">
-              <span class="badge-level">LEVEL 4 · Reading</span>
-              <span class="card-icon-clean">🌳</span>
-            </div>
-            <h2>단락 독해 & 스펠링 마스터</h2>
-            <p>6~7글자 어휘 철자 자판 완성과 단락 맥락 추론</p>
-            <div class="card-tags-row">
-              <span class="card-tag">💎 스펠링 보물</span>
-              <span class="card-tag">📖 단락 독해</span>
-              <span class="card-tag">🎙️ 스토리 낭독</span>
+      <!-- Secondary: 5-Level Mini-Games Accordion -->
+      <div class="games-accordion-card">
+        <div class="games-accordion-header" onclick="app.toggleGamesList()">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="font-size:1.3rem;">🎮</span>
+            <div>
+              <div style="font-weight:700; font-size:1rem; color:#1E293B;">파닉스 & 퍼즐 기초 게임실</div>
+              <div style="font-size:0.8rem; color:#64748B;">LEVEL 1 ~ 5 단계별 단어/퍼즐/퀴즈 놀이</div>
             </div>
           </div>
-          <button class="btn-card-action">학습 시작 <span class="arr">→</span></button>
+          <span id="gamesAccordionArrow" style="font-size:1.2rem; color:#94A3B8; transition:transform 0.2s ease;">▾</span>
         </div>
-
-        <!-- LEVEL 5: 주니어 영작문 & 마스터 에세이 -->
-        <div class="age-card card-level-5" onclick="app.startLevel5()">
-          <div>
-            <div class="card-top-row">
-              <span class="badge-level">LEVEL 5 · Writing</span>
-              <span class="card-icon-clean">👑</span>
-            </div>
-            <h2>주니어 영작 & 복합문</h2>
-            <p>3줄 영어 일기 작문, 과학 팩트 및 접속사 복합문 빌더</p>
-            <div class="card-tags-row">
-              <span class="card-tag">📝 3줄 일기</span>
-              <span class="card-tag">🏆 과학 팩트</span>
-              <span class="card-tag">🧩 복합문 빌더</span>
-            </div>
+        <div id="gamesAccordionContent" style="display:none; padding:14px; border-top:1px solid #E2E8F0;">
+          <div class="games-chips-grid">
+            <button class="game-quick-chip" onclick="app.startLevel1()">🌱 Lv.1 파닉스 & 풍선팡팡</button>
+            <button class="game-quick-chip" onclick="app.startLevel2()">🌿 Lv.2 단어 퍼즐 & 짝맞추기</button>
+            <button class="game-quick-chip" onclick="app.startLevel3()">🍀 Lv.3 일상 문장 & 스피드 퀴즈</button>
+            <button class="game-quick-chip" onclick="app.startLevel4()">🌳 Lv.4 단락 독해 & 스펠링 보물</button>
+            <button class="game-quick-chip" onclick="app.startLevel5()">👑 Lv.5 주니어 3줄 일기 영작</button>
           </div>
-          <button class="btn-card-action">학습 시작 <span class="arr">→</span></button>
-        </div>
-
-        <!-- 마법 영어 동화 제작소 -->
-        <div class="age-card card-story" onclick="app.openStoryMaker()">
-          <div>
-            <div class="card-top-row">
-              <span class="badge-level">AI Studio · Story</span>
-              <span class="card-icon-clean">🪄</span>
-            </div>
-            <h2>마법 영어 동화 제작소</h2>
-            <p>1~5단계 난이도 선택과 나만의 아이디어로 만드는 동화책</p>
-            <div class="card-tags-row">
-              <span class="card-tag">🪄 5단계 맞춤</span>
-              <span class="card-tag">🔊 원어민 낭독</span>
-              <span class="card-tag">🇰🇷 어휘 퀴즈</span>
-            </div>
-          </div>
-          <button class="btn-card-action">동화 만들기 <span class="arr">→</span></button>
-        </div>
-
-                <!-- AI 실전 보이스 롤플레잉 (Voice Partner) -->
-        <div class="age-card roleplay-card-hero" onclick="app.openRolePlay()">
-          <div>
-            <div class="card-top-row">
-              <span class="badge-level">AI Interactive · Voice</span>
-              <span class="card-icon-clean">🎙️</span>
-            </div>
-            <h2>AI 실전 보이스 롤플레잉</h2>
-            <p>아이 놀이 상황부터 성인 공항·카페·비즈니스까지, AI 원어민과 실시간 음성 티키타카</p>
-            <div class="card-tags-row">
-              <span class="card-tag">🎙️ 음성 인식 (STT)</span>
-              <span class="card-tag">✨ 원어민 뉘앙스 코칭</span>
-              <span class="card-tag">☕ 9대 실전 상황</span>
-            </div>
-          </div>
-          <button class="btn-card-action">대화 시작하기 <span class="arr">→</span></button>
-        </div>
-
-        <!-- 성인 영어 라운지 -->
-        <div class="age-card card-adult" onclick="app.openAdultLounge()">
-          <div>
-            <div class="card-top-row">
-              <span class="badge-level">Adult Lounge</span>
-              <span class="card-icon-clean">☕</span>
-            </div>
-            <h2>성인 영어 라운지</h2>
-            <p>아이와 함께 쓰는 생활영어 100 & 해외여행·비즈니스 패턴</p>
-            <div class="card-tags-row">
-              <span class="card-tag">🏡 생활영어 100</span>
-              <span class="card-tag">✈️ 여행 패턴 30</span>
-              <span class="card-tag">💼 롤플레잉</span>
-            </div>
-          </div>
-          <button class="btn-card-action">라운지 입장 <span class="arr">→</span></button>
         </div>
       </div>
     </section>
@@ -3140,129 +3939,139 @@
     </section>
     <!-- ================= SCREEN: AI VOICE ROLE-PLAY STUDIO ================= -->
     <section id="screenRolePlay" class="view-screen">
-      <div class="nav-breadcrumb">
-        <button class="btn-back" onclick="app.showHome()">⬅ 처음으로</button>
-        <h2>🎙️ AI 실전 보이스 롤플레잉 (AI Voice Role-Play)</h2>
+      <!-- Hidden legacy elements to preserve backward compatibility & tests -->
+      <div style="display:none;">
+        <span id="roleplayStatusDot">●</span>
+        <span id="roleplayStatusText"></span>
+        <div id="roleplayLevelTabs">
+          <button id="btnRpLvl1"></button><button id="btnRpLvl2"></button>
+          <button id="btnRpLvl3"></button><button id="btnRpLvl4"></button><button id="btnRpLvl5"></button>
+        </div>
+        <div id="roleplayLevelDescBanner"></div>
+        <input id="roleplayCustomInput">
+        <div id="roleplayScenariosGrid"></div>
       </div>
 
-      <!-- Role-Play Header & Mode Bar -->
-      <div class="roleplay-header-card">
-        <div class="roleplay-status-row">
-          <div class="roleplay-status-pill">
-            <span class="roleplay-dot" id="roleplayStatusDot">●</span>
-            <span id="roleplayStatusText">스마트 오프라인 롤플레잉 모드 (무료 무제한)</span>
-          </div>
-          <button class="roleplay-key-btn" onclick="app.openApiKeyModal()">
-            🔑 Gemini AI 실시간 모드 설정
-          </button>
-        </div>
-
-        <!-- Level Tabs: LEVEL 1 ~ LEVEL 5 -->
-        <div class="roleplay-level-tabs" id="roleplayLevelTabs">
-          <button class="roleplay-lvl-btn active" id="btnRpLvl1" data-lvl="1" onclick="app.switchRoleplayLevel(1)">🌱 LEVEL 1 (기초)</button>
-          <button class="roleplay-lvl-btn" id="btnRpLvl2" data-lvl="2" onclick="app.switchRoleplayLevel(2)">🌿 LEVEL 2 (초급)</button>
-          <button class="roleplay-lvl-btn" id="btnRpLvl3" data-lvl="3" onclick="app.switchRoleplayLevel(3)">🍀 LEVEL 3 (일상)</button>
-          <button class="roleplay-lvl-btn" id="btnRpLvl4" data-lvl="4" onclick="app.switchRoleplayLevel(4)">🌳 LEVEL 4 (여행)</button>
-          <button class="roleplay-lvl-btn" id="btnRpLvl5" data-lvl="5" onclick="app.switchRoleplayLevel(5)">👑 LEVEL 5 (비즈니스)</button>
-        </div>
-
-        <!-- Level Curriculum Guide Banner -->
-        <div class="roleplay-level-desc-banner" id="roleplayLevelDescBanner">
-          <!-- Dynamically populated -->
-        </div>
-
-        <!-- Custom Scenario Creator Card -->
-        <div class="roleplay-custom-card">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; flex-wrap:wrap; gap:8px;">
-            <div style="font-size:1.02rem; font-weight:700; color:#0F172A;">✨ 내가 원하는 맞춤 상황 직접 입력하기 (자유 롤플레잉)</div>
-            <span style="font-size:0.78rem; font-weight:700; background:#EEF2FF; color:#4338CA; padding:3px 8px; border-radius:6px;">Gemini 실시간 AI 전용</span>
-          </div>
-          <div style="font-size:0.86rem; color:#64748B; margin-bottom:12px;">
-            원하는 상황을 한 줄로 적으시면, Gemini AI가 선택하신 레벨 난이도에 꼭 맞추어 실시간 원어민 대화 상대로 변신합니다!
-          </div>
-          <div style="display:flex; gap:8px;">
-            <input type="text" id="roleplayCustomInput" class="roleplay-custom-input" placeholder="예: 뉴욕 지하철 티켓 구매하기, 외국인 친구와 K-POP 이야기하기..." onkeydown="if(event.key==='Enter') app.startCustomRoleplay()">
-            <button class="btn-roleplay-custom-start" onclick="app.startCustomRoleplay()">
-              대화 생성 🪄
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Scenario Cards Panel -->
-      <div class="roleplay-scenarios-grid" id="roleplayScenariosGrid">
-        <!-- Rendered dynamically -->
-      </div>
-
-      <!-- Active Dialogue Room -->
-      <div class="roleplay-room" id="roleplayRoom" style="display:none;">
-        <div class="roleplay-room-header">
-          <div class="roleplay-partner-info">
-            <span class="roleplay-partner-avatar" id="roleplayPartnerAvatar">☕</span>
-            <div>
-              <div class="roleplay-room-title" id="roleplayRoomTitle">Boutique Cafe</div>
-              <div class="roleplay-partner-subtitle" id="roleplayPartnerSubtitle">바리스타 Emma와 커피 주문하기</div>
+      <!-- Active Dialogue Room (Always Full Screen) -->
+      <div class="roleplay-room" id="roleplayRoom" style="display:flex;">
+        <div class="roleplay-room-header" style="position:relative;">
+          <div class="chat-header-left">
+            <span class="chat-avatar-large" id="roleplayPartnerAvatar" onclick="app.openScenarioPickerModal()" title="대화 상황 바꾸기">🐰</span>
+            <div class="chat-title-group">
+              <div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
+                <h3 id="roleplayRoomTitle" style="margin:0;">버디 토끼</h3>
+                <!-- Interactive Level Switcher Pill Button -->
+                <button id="btnRoleplayLevelBadge" class="chat-level-switcher-btn" data-lvl="1" onclick="event.stopPropagation(); app.toggleRoleplayLevelDropdown()" title="대화 난이도 (레벨 1~5) 변경">
+                  <span id="roleplayLevelBadgeText">🌱 Lv.1 기초</span> ▾
+                </button>
+                <span class="chat-switch-tag" onclick="app.openScenarioPickerModal()" title="대화 상황 바꾸기">🔄 상황 바꾸기</span>
+              </div>
+              <div class="chat-turn-indicator">
+                <span id="roleplayPartnerSubtitle">다정한 아기 토끼와 첫 대화</span> · <b id="roleplayTurnBadge">1번째 대화</b>
+              </div>
             </div>
           </div>
-          <div class="roleplay-room-actions">
-            <span class="roleplay-turn-badge" id="roleplayTurnBadge" style="background:#EEF2FF; color:#4338CA; border:1px solid #C7D2FE; font-size:0.78rem; font-weight:700; padding:4px 10px; border-radius:var(--radius-pill); display:inline-flex; align-items:center; gap:4px;">
-              💬 1번째 티키타카
-            </span>
-            <button class="roleplay-action-btn" id="btnToggleRoleplayKorean" onclick="app.toggleRoleplayKorean()">
-              🇰🇷 번역
+          <div class="chat-header-actions">
+            <button class="btn-chat-icon" id="btnToggleRoleplayKorean" onclick="app.toggleRoleplayKorean()" title="한국어 해석 켜기/끄기">
+              🇰🇷
             </button>
-            <button class="roleplay-action-btn" onclick="app.restartCurrentRoleplay()">
-              🔄 다시하기
+            <button class="btn-chat-icon" id="btnOpenTtsSettings" onclick="app.openTtsSettingsModal()" title="원어민 발음 & 목소리 설정">
+              🔊
             </button>
-            <button class="roleplay-action-btn" onclick="app.finishCurrentRoleplay()" style="background:#0F172A; color:#FFFFFF; border-color:#0F172A; font-weight:700;">
-              🏁 대화 완료 & 복습
+            <button class="btn-chat-icon" onclick="app.finishCurrentRoleplay()" title="대화 완주 및 복습">
+              🏁
             </button>
-            <button class="roleplay-action-btn" onclick="app.closeRoleplayRoom()">
-              ✕ 상황 변경
+            <button class="btn-chat-icon" onclick="app.showHome()" title="홈으로">
+              ✕
             </button>
+          </div>
+
+          <!-- Dynamic Level Dropdown Menu -->
+          <div id="roleplayLevelDropdown" class="roleplay-level-dropdown" style="display:none;" onclick="event.stopPropagation()">
+            <div class="level-dropdown-header">🎯 대화 난이도 (레벨 1~5) 즉시 변경</div>
+            <div class="level-dropdown-item" onclick="app.changeActiveChatLevel(1)">
+              <span style="font-size:1.3rem;">🌱</span>
+              <div>
+                <b>LEVEL 1: 기초 입문 (Pre-A1)</b>
+                <p>1~3단어 쉬운 단어 · 느린 발음 (0.8x 속도)</p>
+              </div>
+            </div>
+            <div class="level-dropdown-item" onclick="app.changeActiveChatLevel(2)">
+              <span style="font-size:1.3rem;">🌿</span>
+              <div>
+                <b>LEVEL 2: 초급 회화 (A1)</b>
+                <p>3~5단어 기본 문장 패턴 · 0.85x 속도</p>
+              </div>
+            </div>
+            <div class="level-dropdown-item" onclick="app.changeActiveChatLevel(3)">
+              <span style="font-size:1.3rem;">🍀</span>
+              <div>
+                <b>LEVEL 3: 일상 실전 (A2)</b>
+                <p>5~7단어 일상 대화 · 0.9x 속도</p>
+              </div>
+            </div>
+            <div class="level-dropdown-item" onclick="app.changeActiveChatLevel(4)">
+              <span style="font-size:1.3rem;">🌳</span>
+              <div>
+                <b>LEVEL 4: 여행 & 생활 (B1)</b>
+                <p>자연스러운 원어민 표현 · 0.95x 실전 속도</p>
+              </div>
+            </div>
+            <div class="level-dropdown-item" onclick="app.changeActiveChatLevel(5)">
+              <span style="font-size:1.3rem;">👑</span>
+              <div>
+                <b>LEVEL 5: 비즈니스 & 토론 (B2~C1)</b>
+                <p>전문 어휘 & 토론 · 1.0x 원어민 속도</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Message Stream -->
+        <!-- Chat Stream -->
         <div class="roleplay-chat-stream" id="roleplayChatStream">
           <!-- Bubbles populated dynamically -->
         </div>
 
-        <!-- Active Input Controls Dock -->
+        <!-- Ultra-Clean Bottom Dock (Permanently Visible Input Bar) -->
         <div class="roleplay-dock" id="roleplayDock">
-          <!-- Suggested Chunks Card -->
+          <!-- Suggested Hints Row -->
           <div class="roleplay-hints-bar" id="roleplayHintsBar">
-            <span class="hints-label">💡 이렇게 말해보세요 (클릭 시 자동 발화):</span>
+            <span class="hints-label">💡 추천 답장 (터치하면 바로 전송):</span>
             <div class="hints-chips-list" id="roleplayHintsList">
               <!-- Chips populated dynamically -->
             </div>
           </div>
 
-          <!-- Main Chat Input Bar (Optimized for Smartphone Keyboard Mic & Typing) -->
-          <div class="roleplay-text-drawer" id="roleplayTextDrawer" style="display:flex;">
+          <!-- Main Input Bar: ALWAYS VISIBLE on screen -->
+          <div class="roleplay-input-main-bar" style="display:flex; gap:8px; align-items:center; margin-bottom:8px;">
             <input type="text" id="roleplayTextInput" class="roleplay-text-input" 
-                   placeholder="💬 터치 후 자판 마이크(🎙️)로 말씀하세요..." 
+                   placeholder="💬 영어로 입력 (키보드 🎙️ 마이크 가능)" 
                    autocomplete="off" autocapitalize="sentences"
+                   style="flex:1; border:2px solid #CBD5E1; border-radius:var(--radius-pill); padding:12px 18px; font-size:1rem; outline:none; background:#FFFFFF; -webkit-appearance:none;"
                    onkeydown="if(event.key==='Enter') app.submitRoleplayText()">
-            <button class="roleplay-btn-send" onclick="app.submitRoleplayText()" title="전송">
-              <span>전송</span> 🚀
+            <button class="roleplay-btn-send" onclick="app.submitRoleplayText()" title="전송"
+                    style="background:#4F46E5; color:white; border:none; border-radius:var(--radius-pill); padding:12px 18px; font-weight:800; font-size:0.95rem; cursor:pointer; white-space:nowrap; box-shadow:0 2px 8px rgba(79,70,229,0.25);">
+              전송 🚀
+            </button>
+            <button class="btn-roleplay-mic" id="btnRoleplayMic" 
+                    onclick="app.handleRoleplayMicClick()" 
+                    title="브라우저 마이크 음성인식"
+                    style="background:#0F172A; color:white; border:none; border-radius:var(--radius-pill); padding:12px 16px; font-weight:800; font-size:0.92rem; cursor:pointer; display:inline-flex; align-items:center; gap:6px; white-space:nowrap; box-shadow:0 2px 8px rgba(15,23,42,0.18);">
+              <span class="mic-icon">🎙️</span>
+              <span class="mic-text" id="roleplayMicText">마이크</span>
             </button>
           </div>
 
-          <!-- Sub Controls: Phone Tip + PC Mic Button + Help -->
-          <div class="roleplay-sub-controls">
-            <div class="roleplay-phone-tip">
-              📱 <b>스마트폰 꿀팁:</b> 입력창을 누른 뒤 자판의 <b>마이크(🎙️)</b>를 누르면 말하는 대로 영어가 자동 타이핑됩니다!
+          <!-- Legacy hidden drawer for test assertions -->
+          <div id="roleplayTextDrawer" style="display:none;"></div>
+
+          <div class="roleplay-sub-controls" style="margin-top:4px; display:flex; justify-content:space-between; align-items:center;">
+            <div class="roleplay-phone-tip" style="font-size:0.8rem; color:#64748B;">
+              📱 팁: 입력창을 터치하면 스마트폰 자판 마이크(🎙️)로 바로 말할 수 있어요!
             </div>
-            <div style="display:flex; gap:6px; align-items:center;">
-              <button class="btn-roleplay-mic" id="btnRoleplayMic" onclick="app.handleRoleplayMicClick()" title="PC 브라우저 마이크 음성 인식" style="padding:8px 16px; font-size:0.88rem;">
-                <span class="mic-icon">🎙️</span>
-                <span class="mic-text" id="roleplayMicText">PC 마이크</span>
-              </button>
-              <button class="btn-roleplay-help-toggle" onclick="app.openMicHelpModal()" title="마이크 & 자판 음성 입력 가이드">
-                ❓
-              </button>
-            </div>
+            <button class="btn-chat-icon" onclick="app.openMicHelpModal()" title="마이크 & 음성 도움말" style="width:30px; height:30px; font-size:0.85rem;">
+              ❓
+            </button>
           </div>
         </div>
       </div>
@@ -3283,47 +4092,154 @@
           </div>
           <div style="display:flex; gap:10px;">
             <button class="btn-card-action" style="flex:1; justify-content:center; background:#F1F5F9; color:#0F172A; border-color:#CBD5E1;" onclick="app.restartCurrentRoleplay()">🔄 다시 대화하기</button>
-            <button class="btn-card-action" style="flex:1; justify-content:center; background:#0F172A; color:#FFFFFF; border-color:#0F172A;" onclick="app.finishRoleplayModal()">다른 상황 연습하기 →</button>
+            <button class="btn-card-action" style="flex:1; justify-content:center; background:#0F172A; color:#FFFFFF; border-color:#0F172A;" onclick="app.showHome(); app.closeRoleplaySuccessModal();">홈으로 가기 →</button>
           </div>
         </div>
       </div>
     </section>
 
-  </main>
-  <!-- App Footer v1.0 -->
-  <footer style="text-align:center; padding:28px 16px 40px; color:#94A3B8; font-size:0.85rem; border-top:1px solid #E2E8F0; margin-top:40px;">
-    <div>🌟 <b>온가족 영어 라운지 v1.0.0</b> (Official Release)</div>
-    <div style="margin-top:6px; font-size:0.8rem; color:#64748B;">
-      LEVEL 1~5 맞춤 커리큘럼 · Gemini 무제한 실시간 보이스 롤플레잉 · 마법 동화 제작소 · PWA 오프라인 지원
-    </div>
-  </footer>
+    <!-- 1-Tap Scenario Picker Modal -->
+  <div id="scenarioPickerModal" class="modal-overlay">
+    <div class="modal-card" style="max-width: 680px; text-align: left; position: relative;">
+      <button class="btn-modal-close" onclick="app.closeScenarioPickerModal()">✕</button>
+      <div style="text-align:center; margin-bottom:12px;">
+        <h2 style="font-size:1.4rem; color:#1E293B; margin-bottom:4px;">🎯 대화 레벨 및 상황 선택</h2>
+        <p style="font-size:0.86rem; color:#64748B;">나에게 맞는 레벨(LEVEL 1~5)과 상황을 선택하면 즉시 맞춤 대화가 시작됩니다!</p>
+      </div>
 
+      <!-- Quick Category Toggle -->
+      <div style="display:flex; gap:8px; margin-bottom:10px;">
+        <button id="btnTabModalKid" onclick="app.switchScenarioModalTab('kid')" 
+                style="flex:1; padding:9px; border-radius:10px; border:none; font-weight:800; font-size:0.92rem; cursor:pointer; background:#059669; color:white; transition:all 0.15s ease;">
+          🧒 아이 추천 (Lv.1 ~ Lv.3)
+        </button>
+        <button id="btnTabModalAdult" onclick="app.switchScenarioModalTab('adult')" 
+                style="flex:1; padding:9px; border-radius:10px; border:none; font-weight:800; font-size:0.92rem; cursor:pointer; background:#F1F5F9; color:#334155; transition:all 0.15s ease;">
+          ☕ 성인 실전 (Lv.3 ~ Lv.5)
+        </button>
+      </div>
 
-  <!-- Sticker Modal -->
-  <div id="stickerModal" class="modal-overlay">
-    <div class="modal-card">
-      <button class="btn-modal-close" onclick="app.closeStickerModal()">✕</button>
-      <h2 style="font-size:1.8rem; margin-bottom:8px;">🎨 나의 스티커북</h2>
-      <p style="color:#64748B;">별 5개를 모을 때마다 새로운 마스터 스티커가 잠금 해제돼요!</p>
-      <div class="stickers-grid" id="stickersGrid"></div>
-      <div style="margin-top:16px; font-size:1.1rem; color:#475569;">
-        현재 보유한 별: <b style="color:#B45309;" id="modalStarCount">0</b>개
+      <!-- 5-Level Horizontal Selector Bar -->
+      <div class="scenario-level-filter-bar" id="scenarioLevelFilterBar">
+        <button class="sc-lvl-filter active" id="scLvlFilterAll" onclick="app.filterScenariosByLevel('all')">🌟 전체 상황</button>
+        <button class="sc-lvl-filter" data-lvl="1" id="scLvlFilter1" onclick="app.filterScenariosByLevel(1)">🌱 Lv.1 기초</button>
+        <button class="sc-lvl-filter" data-lvl="2" id="scLvlFilter2" onclick="app.filterScenariosByLevel(2)">🌿 Lv.2 초급</button>
+        <button class="sc-lvl-filter" data-lvl="3" id="scLvlFilter3" onclick="app.filterScenariosByLevel(3)">🍀 Lv.3 일상</button>
+        <button class="sc-lvl-filter" data-lvl="4" id="scLvlFilter4" onclick="app.filterScenariosByLevel(4)">🌳 Lv.4 여행</button>
+        <button class="sc-lvl-filter" data-lvl="5" id="scLvlFilter5" onclick="app.filterScenariosByLevel(5)">👑 Lv.5 비즈니스</button>
+      </div>
+
+      <!-- Dynamic Level Guide Banner -->
+      <div id="modalLevelBanner" class="modal-level-banner">
+        <span id="modalLevelBannerText">🌟 <b>전체 대화 상황 (16종)</b>: 원하는 레벨 버튼을 누르면 난이도별로 확인하실 수 있습니다.</span>
+        <span id="modalLevelBannerSpeed" class="banner-speed-tag">원어민 발화 속도 자동 조절</span>
+      </div>
+
+      <!-- Featured: Free Talk with Alex at Chosen Level! -->
+      <div class="scenario-select-card" id="cardModalFreeTalk" style="border-color:#4F46E5; background:#EEF2FF; margin-bottom:12px;" onclick="app.startFreeTalkFromModal()">
+        <span class="scenario-select-avatar">🗣️</span>
+        <div class="scenario-select-info" style="flex:1;">
+          <div style="display:flex; align-items:center; gap:6px;">
+            <span class="scenario-card-lvl-badge lvl-4" id="badgeModalFreeTalk">LEVEL 1~5 맞춤</span>
+            <h4 style="color:#4338CA; margin:0;" id="titleModalFreeTalk">원어민 알렉스와 자유 프리토킹 (Free Talk)</h4>
+          </div>
+          <p id="descModalFreeTalk" style="margin-top:2px; font-size:0.82rem; color:#475569;">주제 구애 없이 하루 일과, 취미, 생각을 선택한 레벨의 쉬운/자연스러운 영어로 자유롭게 나눠보세요!</p>
+        </div>
+        <button class="btn-card-action" style="padding:6px 12px; font-size:0.82rem; background:#4F46E5; color:white; border:none; border-radius:8px; cursor:pointer;">대화 시작 →</button>
+      </div>
+
+      <!-- Custom Scenario Input (at chosen Level) -->
+      <div style="background:#F8FAFC; border:1px solid #CBD5E1; border-radius:12px; padding:8px 12px; margin-bottom:12px; display:flex; gap:8px; align-items:center;">
+        <input type="text" id="modalCustomScenarioInput" placeholder="✨ 내가 원하는 상황 직접 적기 (예: 런던 식당에서 스테이크 굽기 요청하기)" style="flex:1; border:1px solid #CBD5E1; border-radius:8px; padding:8px 12px; font-size:0.88rem; outline:none;" onkeydown="if(event.key==='Enter') app.startCustomScenarioFromModal()">
+        <button onclick="app.startCustomScenarioFromModal()" style="background:#4F46E5; color:white; border:none; border-radius:8px; padding:8px 14px; font-weight:700; cursor:pointer; font-size:0.86rem; white-space:nowrap;">생성 🪄</button>
+      </div>
+
+      <!-- Dynamic Scenario Grid -->
+      <div class="scenario-picker-grid" id="modalScenariosGrid">
+        <!-- Rendered dynamically by app.renderModalScenarios() -->
       </div>
     </div>
   </div>
 
-  <!-- Parent Guide Modal -->
-  <div id="parentModal" class="modal-overlay">
-    <div class="modal-card" style="max-width: 620px; text-align: left;">
-      <button class="btn-modal-close" onclick="app.closeParentGuide()">✕</button>
-      <h2 style="font-size:1.6rem; margin-bottom:12px; text-align:center;">💡 온가족 영어 학습 꿀팁</h2>
-      <div style="font-size: 0.95rem; color:#334155; line-height: 1.6; max-height: 420px; overflow-y:auto; padding-right:8px;">
-        <h4 style="color:#1E293B;">☕ 성인(부모님) 영어 학습의 핵심</h4>
-        <p>• <b>일상 속 1마디가 최고의 교재:</b> 아침에 일어날 때 "Rise and shine!", 밥 먹을 때 "Breakfast is ready!"처럼 한두 마디씩 집에서 써보세요.</p>
-        <p>• <b>완벽한 문법보다 자연스러운 리액션:</b> 틀리는 것을 두려워하지 않고 자연스럽게 소리 내어 말하는 부모님의 모습을 볼 때 아이도 영어에 자신감을 가집니다.</p>
-        <hr style="margin: 12px 0; border: none; border-top: 1px dashed #CBD5E1;">
-        <h4 style="color:#FF6B6B;">🚀 7세 & 10세 지도 팁</h4>
-        <p>• 7세는 파닉스 음가와 즐거운 소리 반응, 10세는 성취감 있는 문장 조립과 섀도잉으로 이끌어주세요.</p>
+    <!-- TTS Voice Studio Modal -->
+  <div id="ttsSettingsModal" class="modal-overlay">
+    <div class="modal-card" style="max-width: 560px; text-align: left;">
+      <button class="btn-modal-close" onclick="app.closeTtsSettingsModal()">✕</button>
+      <div style="text-align:center; margin-bottom:16px;">
+        <div style="font-size:2.2rem; margin-bottom:4px;">🔊</div>
+        <h2 style="font-size:1.45rem; color:#1E293B; margin-bottom:4px;">원어민 발음 & 목소리 설정</h2>
+        <p style="font-size:0.86rem; color:#64748B;">어색하고 기계적인 발음 대신, 가장 자연스러운 원어민 음성을 선택하세요!</p>
+      </div>
+
+      <!-- Engine Selector -->
+      <div style="margin-bottom:16px;">
+        <label style="font-weight:700; font-size:0.9rem; color:#1E293B; display:block; margin-bottom:8px;">
+          🎙️ 음성 엔진 (스튜디오 vs 내장)
+        </label>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+          <div id="btnEngineGoogle" class="tts-option-card active" onclick="app.setTtsEngine('google')">
+            <div style="font-size:1rem; font-weight:800; color:#1E293B; margin-bottom:4px;">🌟 Google 뉴럴 스튜디오</div>
+            <div style="font-size:0.78rem; color:#64748B; line-height:1.4;">추천 · 실제 원어민 억양과 자연스러운 연음 (스튜디오 음질)</div>
+          </div>
+          <div id="btnEngineWebSpeech" class="tts-option-card" onclick="app.setTtsEngine('webspeech')">
+            <div style="font-size:1rem; font-weight:800; color:#1E293B; margin-bottom:4px;">💻 브라우저 내장 음성</div>
+            <div style="font-size:0.78rem; color:#64748B; line-height:1.4;">Edge Natural / Google Chrome 내장 고품질 합성</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Voice Character Selector -->
+      <div style="margin-bottom:16px;">
+        <label style="font-weight:700; font-size:0.9rem; color:#1E293B; display:block; margin-bottom:8px;">
+          🗣️ 원어민 목소리 캐릭터
+        </label>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+          <div id="btnVoiceFemale" class="tts-option-card active" onclick="app.setTtsVoice('female')">
+            <b>👩 제니 (Jenny)</b>
+            <p>밝고 상냥한 미국 여성 원어민 (기본값)</p>
+          </div>
+          <div id="btnVoiceMale" class="tts-option-card" onclick="app.setTtsVoice('male')">
+            <b>👨 가이 (Guy)</b>
+            <p>다정하고 차분한 미국 남성 원어민</p>
+          </div>
+          <div id="btnVoiceAria" class="tts-option-card" onclick="app.setTtsVoice('aria')">
+            <b>👩 아리아 (Aria)</b>
+            <p>세련되고 자연스러운 미국 여성</p>
+          </div>
+          <div id="btnVoiceBritish" class="tts-option-card" onclick="app.setTtsVoice('british')">
+            <b>🇬🇧 소니아 (Sonia)</b>
+            <p>지적이고 단정한 영국식 억양</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Speech Speed Selector -->
+      <div style="margin-bottom:18px;">
+        <label style="font-weight:700; font-size:0.9rem; color:#1E293B; display:block; margin-bottom:8px;">
+          ⏱️ 기본 말하기 속도
+        </label>
+        <div style="display:flex; gap:8px;">
+          <button id="btnSpeedSlow" class="tts-speed-btn" onclick="app.setTtsSpeed(0.85)">0.85x 천천히 (초보 추천)</button>
+          <button id="btnSpeedNormal" class="tts-speed-btn active" onclick="app.setTtsSpeed(0.92)">0.92x 보통 (자연스러움)</button>
+          <button id="btnSpeedFast" class="tts-speed-btn" onclick="app.setTtsSpeed(1.0)">1.00x 원어민 속도</button>
+        </div>
+      </div>
+
+      <!-- Audio Preview Button -->
+      <div style="background:#F1F5F9; border-radius:12px; padding:12px 14px; display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:16px;">
+        <div>
+          <div style="font-weight:700; font-size:0.88rem; color:#0F172A;">발음 테스트해 보기</div>
+          <div style="font-size:0.78rem; color:#64748B;">선택하신 목소리로 샘플 문장을 즉시 재생합니다.</div>
+        </div>
+        <button onclick="app.previewTtsVoice()" style="background:#4F46E5; color:white; border:none; border-radius:8px; padding:9px 15px; font-weight:700; font-size:0.86rem; cursor:pointer; white-space:nowrap; display:flex; align-items:center; gap:5px; box-shadow:0 2px 6px rgba(79,70,229,0.25);">
+          <span>🔊</span> <span>미리 듣기</span>
+        </button>
+      </div>
+
+      <div>
+        <button class="btn-card-action" style="background:#0F172A; color:white; border-color:#0F172A; width:100%; justify-content:center; padding:12px;" onclick="app.closeTtsSettingsModal()">
+          설정 완료 ✓
+        </button>
       </div>
     </div>
   </div>
@@ -3761,30 +4677,30 @@
         this.levelGuides = {
           1: {
             title: "🌱 LEVEL 1: 기초 입문 (Pre-A1)",
-            desc: "<b>1~3단어 첫소리 & 필수 표현:</b> 아주 쉽고 친근한 단어로 시작하는 첫 회화 발화 (느린 0.8x 발음)",
+            desc: "<b>1~3단어 첫소리 & 필수 표현:</b> 아주 쉽고 친근한 단어로 시작하는 첫 회화 발화 (느린 0.85x 발음)",
             guideline: "Target: Pre-A1 beginner. Use extremely simple, clear, encouraging English (3-5 words max). Ideal for kids or English beginners. Keep hints under 3 words.",
-            voiceRate: 0.8,
-            voicePitch: 1.15
+            voiceRate: 0.85,
+            voicePitch: 1.0
           },
           2: {
             title: "🌿 LEVEL 2: 초급 회화 (A1)",
-            desc: "<b>3~5단어 기본 문장:</b> 'I want...', 'Can I have...' 등 기본 SVO 문장 패턴과 어순 감각 (0.85x 발음)",
+            desc: "<b>3~5단어 기본 문장:</b> 'I want...', 'Can I have...' 등 기본 SVO 문장 패턴과 어순 감각 (0.88x 발음)",
             guideline: "Target: A1 elementary. Use basic daily sentences (4-7 words). Focus on clear patterns like 'Can I have...', 'I like...', 'Here is...'. Keep hints simple and natural.",
-            voiceRate: 0.85,
-            voicePitch: 1.1
+            voiceRate: 0.88,
+            voicePitch: 1.0
           },
           3: {
             title: "🍀 LEVEL 3: 일상 실전 (A2)",
-            desc: "<b>5~7단어 일상 대화:</b> 패스트푸드 주문, 길 묻기, 파티 초대 등 초중급 일상 표현 (0.9x 발음)",
+            desc: "<b>5~7단어 일상 대화:</b> 패스트푸드 주문, 길 묻기, 파티 초대 등 초중급 일상 표현 (0.92x 발음)",
             guideline: "Target: A2 intermediate. Standard everyday conversational English. Focus on questions, directions, and ordering. Keep hints authentic but accessible.",
-            voiceRate: 0.9,
+            voiceRate: 0.92,
             voicePitch: 1.0
           },
           4: {
             title: "🌳 LEVEL 4: 여행 & 생활 (B1)",
-            desc: "<b>원어민 실전 여행:</b> 미국 공항 입국심사, 호텔 체크인, 블루보틀 카페 커스텀 주문 (0.95x 발음)",
+            desc: "<b>원어민 실전 여행:</b> 미국 공항 입국심사, 호텔 체크인, 블루보틀 카페 커스텀 주문 (0.96x 발음)",
             guideline: "Target: B1 real-world travel & life. Authentic native expressions, polite chunks ('Could you please...', 'Would it be possible...'), and nuanced travel scenarios.",
-            voiceRate: 0.95,
+            voiceRate: 0.96,
             voicePitch: 1.0
           },
           5: {
@@ -3792,7 +4708,7 @@
             desc: "<b>비즈니스 & 고급 토론:</b> 글로벌 테크 회의, 영어 면접, 파인다이닝 컴플레인 & 협상 (1.0x 원어민 속도)",
             guideline: "Target: B2-C1 advanced business & discussion. Professional corporate vocabulary, diplomatic disagreements, consensus building, and sophisticated idioms.",
             voiceRate: 1.0,
-            voicePitch: 0.98
+            voicePitch: 1.0
           }
         };
 
@@ -3912,6 +4828,19 @@
             tags: ['파티 초대', '선물 이야기', '주말 약속']
           },
 
+          // LEVEL 4: 자유 프리토킹 & 여행
+          {
+            id: 'lvl4_freetalk',
+            level: 4,
+            title: '원어민과 자유 일상 대화 (Free Talk)',
+            titleEn: 'Free Conversation with Alex',
+            partnerName: '알렉스 (Alex)',
+            partnerTitle: '다정한 원어민 친구 알렉스',
+            avatar: '🗣️',
+            badge: '실전 · 자유대화',
+            desc: '오늘 하루 일과, 주말 계획, 취미 등 무엇이든 자유롭게 영어로 이야기해 봐요!',
+            tags: ['자유 프리토킹', '일상 스몰토크', '자연스러운 대화']
+          },
           // LEVEL 4: 여행 & 생활 (B1)
           {
             id: 'lvl4_immigration',
@@ -3995,7 +4924,31 @@
       }
 
       getScenarioById(id) {
-        return this.scenarioPresets.find(s => s.id === id) || this.scenarioPresets[0];
+        if (!id) return this.scenarioPresets[0];
+        const aliases = {
+          'lvl4_airport': 'lvl4_immigration',
+          'lvl3_burger': 'lvl3_fastfood',
+          'lvl5_meeting': 'lvl5_standup',
+          'lvl1_teddy': 'lvl1_colors',
+          'lvl1_kiwi': 'lvl1_fruits',
+          'lvl2_barry': 'lvl2_icecream',
+          'lvl2_luigi': 'lvl2_pizza'
+        };
+        const realId = aliases[id] || id;
+        return this.scenarioPresets.find(s => s.id === realId) || this.scenarioPresets[0];
+      }
+
+      setConversationLevel(level) {
+        level = parseInt(level, 10) || 1;
+        this.currentLevel = level;
+        if (this.currentScenario) {
+          this.currentScenario.level = level;
+          const info = this.levelGuides[level] || this.levelGuides[1];
+          const subEl = document.getElementById('roleplayPartnerSubtitle');
+          if (subEl) {
+            subEl.textContent = `${this.currentScenario.partnerTitle} · [LEVEL ${level}]`;
+          }
+        }
       }
 
       async startScenario(scenarioObj) {
@@ -4016,6 +4969,10 @@
         if (titleEl) titleEl.textContent = this.currentScenario.titleEn;
         if (subEl) subEl.textContent = `${this.currentScenario.partnerTitle} · [LEVEL ${this.currentScenario.level}]`;
         if (streamEl) streamEl.innerHTML = '';
+
+        if (this.app && this.app.updateChatLevelUI) {
+          this.app.updateChatLevelUI(this.currentScenario.level);
+        }
 
         const turnBadge = document.getElementById('roleplayTurnBadge');
         if (turnBadge) {
@@ -4090,6 +5047,13 @@ Respond in ONLY pure valid JSON:
       }
 
       generateSmartStarter(scenario) {
+        if (scenario.id === 'lvl4_freetalk') {
+          return {
+            partnerReplyEn: `Hi there! I'm Alex. Great to chat with you today! What's on your mind? What would you like to talk about?`,
+            partnerReplyKo: `안녕하세요! 알렉스예요. 오늘 이야기 나눠서 반가워요! 어떤 이야기를 나눠볼까요?`,
+            suggestedChunks: ["Let's talk about my day!", "I want to practice daily English.", "Tell me about your favorite hobbies!"]
+          };
+        }
         const lvl = scenario.level;
         if (lvl === 1) {
           return {
@@ -4788,27 +5752,256 @@ Respond in ONLY pure valid JSON:
       }
 
       initTTS() {
-        if ('speechSynthesis' in window) {
+        if (typeof Audio !== 'undefined') {
+          this.ttsAudioPlayer = new Audio();
+        } else {
+          this.ttsAudioPlayer = null;
+        }
+        this.currentAudio = null;
+
+        // User TTS Preferences
+        this.ttsEngine = (typeof localStorage !== 'undefined' && localStorage.getItem('kids_tts_engine')) || 'google'; // 'google' | 'webspeech'
+        this.ttsVoicePreference = (typeof localStorage !== 'undefined' && localStorage.getItem('kids_tts_voice')) || 'female'; // 'female' | 'male' | 'aria' | 'british'
+        this.ttsSpeed = parseFloat((typeof localStorage !== 'undefined' && localStorage.getItem('kids_tts_speed')) || '0.92');
+
+        if (typeof window !== 'undefined' && 'speechSynthesis' in window && window.speechSynthesis) {
           window.speechSynthesis.onvoiceschanged = () => {
             this.voices = window.speechSynthesis.getVoices();
           };
+          this.voices = window.speechSynthesis.getVoices();
         }
       }
 
-      speak(text, rate = 0.9, pitch = 1.0, onEndCallback = null) {
-        if (!('speechSynthesis' in window)) return;
-        window.speechSynthesis.cancel();
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = 'en-US';
-        utterance.rate = rate;
-        utterance.pitch = pitch;
+      // Universal Speak Entry Point (Smart Hybrid Audio)
+      speak(text, rate = null, pitch = 1.0, onEndCallback = null) {
+        if (!text) return;
+        const speed = rate || this.ttsSpeed || 0.92;
 
-        const voices = window.speechSynthesis.getVoices();
-        const enVoice = voices.find(v => (v.lang === 'en-US' || v.lang === 'en_US') && (v.name.includes('Google') || v.name.includes('Natural') || v.name.includes('Jenny') || v.name.includes('David')));
-        if (enVoice) utterance.voice = enVoice;
+        if (this.ttsEngine === 'google') {
+          this.speakGoogleTTS(text, speed, onEndCallback);
+        } else {
+          this.speakWebSpeech(text, speed, pitch, onEndCallback);
+        }
+      }
+
+      // Studio-Quality Google Neural Stream
+      speakGoogleTTS(text, rate = 1.0, onEndCallback = null) {
+        // Clean text: strip emojis, markdown, and extra punctuation
+        const cleanText = text
+          .replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F700}-\u{1F77F}\u{1F780}-\u{1F7FF}\u{1F800}-\u{1F8FF}\u{1F900}-\u{1F9FF}\u{1FA00}-\u{1FA6F}\u{1FA70}-\u{1FAFF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/gu, '')
+          .replace(/[*_#`~]/g, '')
+          .trim();
+
+        if (!cleanText) {
+          if (onEndCallback) onEndCallback();
+          return;
+        }
+
+        // Cancel previous speech/audio
+        if (this.currentAudio) {
+          try {
+            this.currentAudio.pause();
+            this.currentAudio.currentTime = 0;
+          } catch(e) {}
+          this.currentAudio = null;
+        }
+        if (typeof window !== 'undefined' && 'speechSynthesis' in window && window.speechSynthesis) {
+          try { window.speechSynthesis.cancel(); } catch(e) {}
+        }
+
+        // Chunk text into sentence units
+        const sentences = cleanText.match(/[^.!?]+[.!?]+|[^.!?]+$/g) || [cleanText];
+        const chunks = [];
+        sentences.forEach(s => {
+          const trimmed = s.trim();
+          if (!trimmed) return;
+          if (trimmed.length <= 130) {
+            chunks.push(trimmed);
+          } else {
+            const sub = trimmed.split(/,\s*/);
+            sub.forEach(p => { if (p.trim()) chunks.push(p.trim()); });
+          }
+        });
+
+        if (chunks.length === 0) {
+          if (onEndCallback) onEndCallback();
+          return;
+        }
+
+        let chunkIdx = 0;
+        const langCode = this.ttsVoicePreference === 'british' ? 'en-GB' : 'en-US';
+
+        const playNext = () => {
+          if (chunkIdx >= chunks.length) {
+            this.currentAudio = null;
+            if (onEndCallback) onEndCallback();
+            return;
+          }
+
+          const chunk = chunks[chunkIdx++];
+          const url = `https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=${langCode}&q=${encodeURIComponent(chunk)}`;
+          
+          if (typeof Audio === 'undefined') {
+            this.speakWebSpeech(chunks.join(' '), rate, 1.0, onEndCallback);
+            return;
+          }
+
+          const audio = new Audio(url);
+          this.currentAudio = audio;
+          audio.playbackRate = rate || 1.0;
+
+          audio.onended = () => {
+            playNext();
+          };
+
+          audio.onerror = (err) => {
+            console.warn("Google TTS audio error, fallback to WebSpeech:", err);
+            this.speakWebSpeech(chunks.slice(chunkIdx - 1).join(' '), rate, 1.0, onEndCallback);
+          };
+
+          audio.play().catch(e => {
+            console.warn("Audio play blocked, fallback to WebSpeech:", e);
+            this.speakWebSpeech(chunks.slice(chunkIdx - 1).join(' '), rate, 1.0, onEndCallback);
+          });
+        };
+
+        playNext();
+      }
+
+      // Browser Natural Neural Voice Synthesis
+      speakWebSpeech(text, rate = 0.9, pitch = 1.0, onEndCallback = null) {
+        if (typeof window === 'undefined' || !('speechSynthesis' in window) || !window.speechSynthesis) return;
+        try { window.speechSynthesis.cancel(); } catch(e) {}
+
+        const cleanText = text
+          .replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F700}-\u{1F77F}\u{1F780}-\u{1F7FF}\u{1F800}-\u{1F8FF}\u{1F900}-\u{1F9FF}\u{1FA00}-\u{1FA6F}\u{1FA70}-\u{1FAFF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/gu, '')
+          .replace(/[*_#`~]/g, '')
+          .trim();
+
+        const utterance = new SpeechSynthesisUtterance(cleanText);
+        utterance.lang = this.ttsVoicePreference === 'british' ? 'en-GB' : 'en-US';
+        utterance.rate = rate;
+        utterance.pitch = 1.0; // Fixed at 1.0 to eliminate squeaky metallic distortion
+
+        const bestVoice = this.getBestNaturalVoice();
+        if (bestVoice) utterance.voice = bestVoice;
 
         if (onEndCallback) utterance.onend = onEndCallback;
         window.speechSynthesis.speak(utterance);
+      }
+
+      // Priority Matcher for Edge Natural / Google Neural / Apple Enhanced Voices
+      getBestNaturalVoice() {
+        if (typeof window === 'undefined' || !('speechSynthesis' in window) || !window.speechSynthesis) return null;
+        const voices = window.speechSynthesis.getVoices() || [];
+        if (voices.length === 0) return null;
+
+        const isBritish = this.ttsVoicePreference === 'british';
+        const isMale = this.ttsVoicePreference === 'male';
+        const isAria = this.ttsVoicePreference === 'aria';
+        const targetLang = isBritish ? ['en-gb', 'en_gb'] : ['en-us', 'en_us'];
+
+        const enVoices = voices.filter(v => 
+          targetLang.some(l => v.lang.toLowerCase().replace('_', '-') === l) ||
+          v.lang.toLowerCase().startsWith('en')
+        );
+
+        if (enVoices.length === 0) return voices.find(v => v.lang.startsWith('en')) || null;
+
+        // Exclude legacy SAPI5 robotic Desktop synthesizers
+        const isRobotic = (name) => /desktop|david desktop|zira desktop|mark desktop|hazel desktop|heami/i.test(name);
+
+        if (isBritish) {
+          const br = enVoices.find(v => !isRobotic(v.name) && (v.name.includes('Sonia') || v.name.includes('Ryan') || v.name.includes('UK English') || v.name.includes('George')));
+          if (br) return br;
+        } else if (isMale) {
+          const male = enVoices.find(v => !isRobotic(v.name) && (v.name.includes('Guy') || v.name.includes('Christopher') || v.name.includes('Eric') || v.name.includes('Google US English Male') || v.name.includes('Aaron')));
+          if (male) return male;
+        } else if (isAria) {
+          const aria = enVoices.find(v => !isRobotic(v.name) && v.name.includes('Aria'));
+          if (aria) return aria;
+        } else {
+          // Jenny / Google US English Female (Natural)
+          const female = enVoices.find(v => !isRobotic(v.name) && (v.name.includes('Jenny') || v.name.includes('Google US English') || v.name.includes('Samantha') || v.name.includes('Ava')));
+          if (female) return female;
+        }
+
+        // Fallback to any Natural / Neural voice
+        const natural = enVoices.find(v => !isRobotic(v.name) && /natural|neural|enhanced|premium/i.test(v.name));
+        if (natural) return natural;
+
+        // Non-robotic standard en-US voice
+        const nonRobotic = enVoices.find(v => !isRobotic(v.name));
+        if (nonRobotic) return nonRobotic;
+
+        return enVoices[0];
+      }
+
+      // ================= TTS SETTINGS MODAL METHODS =================
+      openTtsSettingsModal() {
+        const modal = document.getElementById('ttsSettingsModal');
+        if (modal) {
+          this.updateTtsSettingsUI();
+          modal.classList.add('open');
+        }
+      }
+
+      closeTtsSettingsModal() {
+        const modal = document.getElementById('ttsSettingsModal');
+        if (modal) modal.classList.remove('open');
+      }
+
+      setTtsEngine(engine) {
+        this.ttsEngine = engine;
+        if (typeof localStorage !== 'undefined') localStorage.setItem('kids_tts_engine', engine);
+        this.updateTtsSettingsUI();
+        this.showFeedback(engine === 'google' ? '🌟 Google 뉴럴 스튜디오 음성이 적용되었습니다!' : '💻 브라우저 내장 음성이 적용되었습니다!', false, 2000);
+      }
+
+      setTtsVoice(voice) {
+        this.ttsVoicePreference = voice;
+        if (typeof localStorage !== 'undefined') localStorage.setItem('kids_tts_voice', voice);
+        this.updateTtsSettingsUI();
+      }
+
+      setTtsSpeed(speed) {
+        this.ttsSpeed = speed;
+        if (typeof localStorage !== 'undefined') localStorage.setItem('kids_tts_speed', String(speed));
+        this.updateTtsSettingsUI();
+      }
+
+      previewTtsVoice() {
+        const samplePhrases = {
+          female: "Hello! I am Jenny. Welcome to our English lounge! Let's practice English together.",
+          male: "Hello there! I am Guy. It is wonderful to meet you. Let's have a great conversation.",
+          aria: "Hi! I am Aria. Nice to see you today! How can I help you improve your speaking?",
+          british: "Good day! I am Sonia. Delighted to meet you. Shall we practise some English today?"
+        };
+        const text = samplePhrases[this.ttsVoicePreference] || samplePhrases.female;
+        this.speak(text, this.ttsSpeed);
+      }
+
+      updateTtsSettingsUI() {
+        // Engine Cards
+        const btnGoogle = document.getElementById('btnEngineGoogle');
+        const btnWebSpeech = document.getElementById('btnEngineWebSpeech');
+        if (btnGoogle) btnGoogle.classList.toggle('active', this.ttsEngine === 'google');
+        if (btnWebSpeech) btnWebSpeech.classList.toggle('active', this.ttsEngine === 'webspeech');
+
+        // Voice Cards
+        const voices = ['Female', 'Male', 'Aria', 'British'];
+        voices.forEach(v => {
+          const el = document.getElementById(`btnVoice${v}`);
+          if (el) el.classList.toggle('active', this.ttsVoicePreference === v.toLowerCase());
+        });
+
+        // Speed Buttons
+        const btnSlow = document.getElementById('btnSpeedSlow');
+        const btnNormal = document.getElementById('btnSpeedNormal');
+        const btnFast = document.getElementById('btnSpeedFast');
+        if (btnSlow) btnSlow.classList.toggle('active', Math.abs(this.ttsSpeed - 0.85) < 0.03);
+        if (btnNormal) btnNormal.classList.toggle('active', Math.abs(this.ttsSpeed - 0.92) < 0.03);
+        if (btnFast) btnFast.classList.toggle('active', Math.abs(this.ttsSpeed - 1.0) < 0.03);
       }
 
       addStars(count = 1) {
@@ -4860,6 +6053,269 @@ Respond in ONLY pure valid JSON:
       }
 
       showHome() { this.showScreen('screenHome'); }
+
+      // ================= V2.0 ULTRA-CLEAN APP METHODS =================
+      startKidChatQuick() {
+        this.openRolePlay(1);
+        this.openScenarioPickerModal('kid');
+      }
+
+      startAdultChatQuick() {
+        this.openRolePlay(4);
+        this.openScenarioPickerModal('adult');
+      }
+
+      startChatAtLevel(level) {
+        level = parseInt(level, 10) || 1;
+        this.openRolePlay(level);
+        this.openScenarioPickerModal(level);
+      }
+
+      openScenarioPickerModal(levelOrCategory = 'all') {
+        const modal = document.getElementById('scenarioPickerModal');
+        if (!modal) return;
+        modal.classList.add('open');
+
+        if (typeof levelOrCategory === 'number' || (!isNaN(parseInt(levelOrCategory, 10)) && parseInt(levelOrCategory, 10) >= 1 && parseInt(levelOrCategory, 10) <= 5)) {
+          const lvl = parseInt(levelOrCategory, 10);
+          this.filterScenariosByLevel(lvl);
+        } else if (levelOrCategory === 'kid') {
+          this.switchScenarioModalTab('kid');
+        } else if (levelOrCategory === 'adult') {
+          this.switchScenarioModalTab('adult');
+        } else {
+          this.filterScenariosByLevel('all');
+        }
+      }
+
+      closeScenarioPickerModal() {
+        const modal = document.getElementById('scenarioPickerModal');
+        if (modal) modal.classList.remove('open');
+      }
+
+      switchScenarioModalTab(tab) {
+        this.modalCurrentCategory = tab;
+        const btnKid = document.getElementById('btnTabModalKid');
+        const btnAdult = document.getElementById('btnTabModalAdult');
+
+        if (tab === 'kid') {
+          if (btnKid) { btnKid.style.background = '#059669'; btnKid.style.color = 'white'; }
+          if (btnAdult) { btnAdult.style.background = '#F1F5F9'; btnAdult.style.color = '#334155'; }
+          this.filterScenariosByLevel(1);
+        } else {
+          if (btnAdult) { btnAdult.style.background = '#4F46E5'; btnAdult.style.color = 'white'; }
+          if (btnKid) { btnKid.style.background = '#F1F5F9'; btnKid.style.color = '#334155'; }
+          this.filterScenariosByLevel(4);
+        }
+      }
+
+      filterScenariosByLevel(level) {
+        this.modalCurrentLevel = level;
+
+        // Update filter pills active state
+        for (let l = 1; l <= 5; l++) {
+          const p = document.getElementById(`scLvlFilter${l}`);
+          if (p) p.classList.toggle('active', level === l);
+        }
+        const pAll = document.getElementById('scLvlFilterAll');
+        if (pAll) pAll.classList.toggle('active', level === 'all');
+
+        // Update Level Banner text & speed
+        const bannerText = document.getElementById('modalLevelBannerText');
+        const bannerSpeed = document.getElementById('modalLevelBannerSpeed');
+        const freeTalkBadge = document.getElementById('badgeModalFreeTalk');
+        const freeTalkTitle = document.getElementById('titleModalFreeTalk');
+        const freeTalkDesc = document.getElementById('descModalFreeTalk');
+
+        if (level === 'all') {
+          if (bannerText) bannerText.innerHTML = `🌟 <b>전체 대화 상황 (16종)</b>: 원하는 레벨(Lv.1~5)을 누르시면 난이도별로 확인하실 수 있습니다.`;
+          if (bannerSpeed) bannerSpeed.textContent = `난이도별 발화속도 자동조절`;
+          if (freeTalkBadge) { freeTalkBadge.textContent = 'LEVEL 1~5 맞춤'; freeTalkBadge.className = 'scenario-card-lvl-badge lvl-4'; }
+          if (freeTalkTitle) freeTalkTitle.textContent = `원어민 알렉스와 자유 프리토킹 (Free Talk)`;
+          if (freeTalkDesc) freeTalkDesc.textContent = `주제 구애 없이 하루 일과, 취미, 생각을 선택한 레벨의 쉬운/자연스러운 영어로 자유롭게 나눠보세요!`;
+        } else {
+          const info = this.rolePlayEngine.levelGuides[level] || this.rolePlayEngine.levelGuides[1];
+          if (bannerText) bannerText.innerHTML = `${info.title} · ${info.desc}`;
+          if (bannerSpeed) bannerSpeed.textContent = `속도 ${info.voiceRate}x (${info.voiceRate < 0.9 ? '느린 발음' : '원어민 속도'})`;
+          if (freeTalkBadge) {
+            freeTalkBadge.textContent = `LEVEL ${level} 맞춤`;
+            freeTalkBadge.className = `scenario-card-lvl-badge lvl-${level}`;
+          }
+          if (freeTalkTitle) freeTalkTitle.textContent = `알렉스와 자유 프리토킹 (LEVEL ${level} 맞춤 대화)`;
+          if (freeTalkDesc) freeTalkDesc.textContent = `선택하신 LEVEL ${level}에 꼭 맞춘 어휘와 ${info.voiceRate}x 발음 속도로 부담 없이 자유롭게 대화해요!`;
+        }
+
+        this.renderModalScenarios(level);
+      }
+
+      renderModalScenarios(level = 'all') {
+        const grid = document.getElementById('modalScenariosGrid');
+        if (!grid) return;
+        grid.innerHTML = '';
+
+        let list = this.rolePlayEngine.scenarioPresets;
+        if (level !== 'all') {
+          list = list.filter(s => s.level === parseInt(level, 10));
+        }
+
+        const levelColors = {
+          1: '#059669',
+          2: '#0D9488',
+          3: '#0284C7',
+          4: '#4F46E5',
+          5: '#7C3AED'
+        };
+
+        list.forEach(sc => {
+          const card = document.createElement('div');
+          card.className = 'scenario-select-card';
+          card.onclick = () => this.selectScenarioFromModal(sc.id);
+
+          const badgeColor = levelColors[sc.level] || '#4F46E5';
+
+          card.innerHTML = `
+            <span class="scenario-select-avatar">${sc.avatar}</span>
+            <div class="scenario-select-info" style="flex:1;">
+              <div style="display:flex; align-items:center; gap:6px; margin-bottom:2px;">
+                <span class="scenario-card-lvl-badge lvl-${sc.level}">LEVEL ${sc.level}</span>
+                <h4 style="margin:0; font-size:0.98rem; color:#0F172A;">${sc.title}</h4>
+              </div>
+              <p style="margin-bottom:4px; font-size:0.82rem; color:#64748B;">${sc.desc}</p>
+              <div style="font-size:0.75rem; color:${badgeColor}; font-weight:700;">
+                파트너: ${sc.partnerName} · #${sc.tags[0] || ''}
+              </div>
+            </div>
+            <span style="color:#94A3B8; font-size:1.1rem; flex-shrink:0;">→</span>
+          `;
+          grid.appendChild(card);
+        });
+      }
+
+      selectScenarioFromModal(scenarioId) {
+        this.closeScenarioPickerModal();
+        const room = document.getElementById('roleplayRoom');
+        if (room) room.style.display = 'flex';
+        const sc = this.rolePlayEngine.getScenarioById(scenarioId) || this.rolePlayEngine.scenarioPresets[0];
+        if (sc) this.rolePlayEngine.startScenario(sc);
+      }
+
+      startFreeTalkFromModal() {
+        const lvl = (this.modalCurrentLevel && this.modalCurrentLevel !== 'all') ? parseInt(this.modalCurrentLevel, 10) : (this.rolePlayEngine.currentLevel || 4);
+        this.closeScenarioPickerModal();
+        const room = document.getElementById('roleplayRoom');
+        if (room) room.style.display = 'flex';
+        
+        const info = this.rolePlayEngine.levelGuides[lvl] || this.rolePlayEngine.levelGuides[1];
+        const freeTalkScenario = {
+          id: `freetalk_lvl${lvl}`,
+          level: lvl,
+          title: `원어민 알렉스와 자유 대화 (LEVEL ${lvl})`,
+          titleEn: `Free Talk with Alex (LEVEL ${lvl})`,
+          partnerName: '알렉스 (Alex)',
+          partnerTitle: `다정한 원어민 친구 Alex (${info.title.split(':')[1]?.trim() || ''})`,
+          avatar: '🗣️',
+          badge: `LEVEL ${lvl} · 자유대화`,
+          desc: `선택하신 LEVEL ${lvl}에 맞춰 하루 일과, 취미, 생각 등 무엇이든 자유롭게 영어로 이야기해 봐요!`,
+          tags: ['자유 프리토킹', `LEVEL ${lvl}`, '실시간 대화']
+        };
+        this.rolePlayEngine.startScenario(freeTalkScenario);
+      }
+
+      startCustomScenarioFromModal() {
+        const input = document.getElementById('modalCustomScenarioInput');
+        if (!input) return;
+        const val = input.value.trim();
+        if (val) {
+          const lvl = (this.modalCurrentLevel && this.modalCurrentLevel !== 'all') ? parseInt(this.modalCurrentLevel, 10) : (this.rolePlayEngine.currentLevel || 1);
+          this.closeScenarioPickerModal();
+          const customInput = document.getElementById('roleplayCustomInput');
+          if (customInput) customInput.value = val;
+          this.startCustomRoleplay(lvl);
+        } else {
+          alert("원하시는 롤플레잉 상황을 입력해 주세요! (예: 런던 식당에서 스테이크 굽기 요청하기)");
+          input.focus();
+        }
+      }
+
+      toggleRoleplayLevelDropdown() {
+        const dropdown = document.getElementById('roleplayLevelDropdown');
+        if (!dropdown) return;
+        dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+      }
+
+      closeRoleplayLevelDropdown() {
+        const dropdown = document.getElementById('roleplayLevelDropdown');
+        if (dropdown) dropdown.style.display = 'none';
+      }
+
+      changeActiveChatLevel(level) {
+        level = parseInt(level, 10) || 1;
+        this.closeRoleplayLevelDropdown();
+        
+        if (this.rolePlayEngine) {
+          this.rolePlayEngine.setConversationLevel(level);
+        }
+        
+        this.updateChatLevelUI(level);
+        
+        const info = this.rolePlayEngine.levelGuides[level] || this.rolePlayEngine.levelGuides[1];
+        const streamEl = document.getElementById('roleplayChatStream');
+        if (streamEl) {
+          const notice = document.createElement('div');
+          notice.className = 'chat-system-notice';
+          notice.innerHTML = `✨ 대화 난이도가 <b>[${info.title}]</b>로 변경되었습니다.<br><small style="color:#4F46E5;">다음 답변부터 AI 파트너의 문장 난이도와 말하기 속도(${info.voiceRate}x)가 알맞게 조절됩니다.</small>`;
+          streamEl.appendChild(notice);
+          streamEl.scrollTop = streamEl.scrollHeight;
+        }
+        
+        this.showFeedback(`대화 난이도: ${info.title} 적용! ⭐`, false, 2500);
+      }
+
+      updateChatLevelUI(level) {
+        level = parseInt(level, 10) || 1;
+        const badgeBtn = document.getElementById('btnRoleplayLevelBadge');
+        const badgeText = document.getElementById('roleplayLevelBadgeText');
+        const levelNames = {
+          1: '🌱 Lv.1 기초',
+          2: '🌿 Lv.2 초급',
+          3: '🍀 Lv.3 일상',
+          4: '🌳 Lv.4 여행',
+          5: '👑 Lv.5 비즈니스'
+        };
+        if (badgeBtn) {
+          badgeBtn.setAttribute('data-lvl', String(level));
+        }
+        if (badgeText) {
+          badgeText.textContent = levelNames[level] || `Lv.${level}`;
+        }
+        
+        // Update legacy buttons btnRpLvl1 ~ btnRpLvl5 for tests
+        for (let l = 1; l <= 5; l++) {
+          const btn = document.getElementById(`btnRpLvl${l}`);
+          if (btn) btn.classList.toggle('active', l === level);
+        }
+      }
+
+      toggleMobileMenu() {
+        const menu = document.getElementById('mobileQuickMenu');
+        if (!menu) return;
+        menu.style.display = menu.style.display === 'none' ? 'flex' : 'none';
+      }
+
+      toggleGamesList() {
+        const content = document.getElementById('gamesAccordionContent');
+        const arrow = document.getElementById('gamesAccordionArrow');
+        if (!content) return;
+        const isHidden = content.style.display === 'none';
+        content.style.display = isHidden ? 'block' : 'none';
+        if (arrow) arrow.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+      }
+
+      closeRoleplaySuccessModal() {
+        const m = document.getElementById('roleplaySuccessModal');
+        if (m) m.classList.remove('open');
+      }
+
 
       // ================= 🎙️ AI Voice Role-Play Methods =================
       openRolePlay(level = 1) {
@@ -7443,7 +8899,19 @@ Output MUST strictly be valid JSON adhering to this exact schema:
       closeParentGuide() { document.getElementById('parentModal').classList.remove('open'); }
     }
 
-    const app = new KidsEnglishApp();
+    if (typeof window !== 'undefined' && window.addEventListener) {
+  window.addEventListener('click', (e) => {
+    const dropdown = document.getElementById('roleplayLevelDropdown');
+    const btn = document.getElementById('btnRoleplayLevelBadge');
+    if (dropdown && dropdown.style.display !== 'none') {
+      if (!dropdown.contains(e.target) && (!btn || !btn.contains(e.target))) {
+        dropdown.style.display = 'none';
+      }
+    }
+  });
+}
+
+const app = new KidsEnglishApp();
 
     // 🌟 Standalone Single-File Application (All logic, CSS, sound synths, and engines in index.html)
 
