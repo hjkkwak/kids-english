@@ -3186,6 +3186,60 @@
     }
 
     
+        /* Free Talk Card & Pill Button Refinements */
+    .free-talk-highlight-card {
+      border: 2px solid #818CF8 !important;
+      background: linear-gradient(135deg, #FFFFFF 55%, #EEF2FF 100%) !important;
+      box-shadow: 0 3px 12px rgba(79, 70, 229, 0.08);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .free-talk-tag {
+      font-size: 0.72rem;
+      background: #FEF3C7;
+      color: #B45309;
+      border: 1px solid #FCD34D;
+      border-radius: 6px;
+      padding: 2px 7px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .btn-start-pill {
+      background: #4F46E5;
+      color: #FFFFFF;
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      font-size: 0.86rem;
+      font-weight: 700;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 8px rgba(79, 70, 229, 0.25);
+      flex-shrink: 0;
+      transition: all 0.15s ease;
+      cursor: pointer;
+    }
+    .free-talk-highlight-card:hover .btn-start-pill {
+      background: #4338CA;
+      transform: translateX(2px);
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+    }
+    @media (max-width: 520px) {
+      .free-talk-highlight-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+      .btn-start-pill {
+        justify-content: center;
+        width: 100%;
+        padding: 10px 14px;
+      }
+    }
+
     /* TTS Voice Studio Styles */
     .tts-option-card {
       background: #F8FAFC;
@@ -4136,16 +4190,19 @@
       </div>
 
       <!-- Featured: Free Talk with Alex at Chosen Level! -->
-      <div class="scenario-select-card" id="cardModalFreeTalk" style="border-color:#4F46E5; background:#EEF2FF; margin-bottom:12px;" onclick="app.startFreeTalkFromModal()">
+      <div class="scenario-select-card free-talk-highlight-card" id="cardModalFreeTalk" onclick="app.startFreeTalkFromModal()">
         <span class="scenario-select-avatar">🗣️</span>
-        <div class="scenario-select-info" style="flex:1;">
-          <div style="display:flex; align-items:center; gap:6px;">
-            <span class="scenario-card-lvl-badge lvl-4" id="badgeModalFreeTalk">LEVEL 1~5 맞춤</span>
-            <h4 style="color:#4338CA; margin:0;" id="titleModalFreeTalk">원어민 알렉스와 자유 프리토킹 (Free Talk)</h4>
+        <div class="scenario-select-info" style="flex:1; min-width:0;">
+          <div style="display:flex; align-items:center; gap:6px; margin-bottom:4px; flex-wrap:wrap;">
+            <span class="scenario-card-lvl-badge lvl-4" id="badgeModalFreeTalk">LEVEL 4 맞춤</span>
+            <h4 style="color:#1E293B; margin:0; font-size:1.02rem; font-weight:800;" id="titleModalFreeTalk">알렉스와 자유 프리토킹</h4>
+            <span class="free-talk-tag">⭐ 추천</span>
           </div>
-          <p id="descModalFreeTalk" style="margin-top:2px; font-size:0.82rem; color:#475569;">주제 구애 없이 하루 일과, 취미, 생각을 선택한 레벨의 쉬운/자연스러운 영어로 자유롭게 나눠보세요!</p>
+          <p id="descModalFreeTalk" style="margin:0; font-size:0.83rem; color:#475569; line-height:1.45;">주제 제한 없이 일상, 취미, 생각을 선택한 레벨의 원어민 영어로 편안하게 나눠보세요.</p>
         </div>
-        <button class="btn-card-action" style="padding:6px 12px; font-size:0.82rem; background:#4F46E5; color:white; border:none; border-radius:8px; cursor:pointer;">대화 시작 →</button>
+        <div class="btn-start-pill">
+          <span>대화 시작</span> <span>→</span>
+        </div>
       </div>
 
       <!-- Custom Scenario Input (at chosen Level) -->
@@ -6130,9 +6187,9 @@ Respond in ONLY pure valid JSON:
         if (level === 'all') {
           if (bannerText) bannerText.innerHTML = `🌟 <b>전체 대화 상황 (16종)</b>: 원하는 레벨(Lv.1~5)을 누르시면 난이도별로 확인하실 수 있습니다.`;
           if (bannerSpeed) bannerSpeed.textContent = `난이도별 발화속도 자동조절`;
-          if (freeTalkBadge) { freeTalkBadge.textContent = 'LEVEL 1~5 맞춤'; freeTalkBadge.className = 'scenario-card-lvl-badge lvl-4'; }
-          if (freeTalkTitle) freeTalkTitle.textContent = `원어민 알렉스와 자유 프리토킹 (Free Talk)`;
-          if (freeTalkDesc) freeTalkDesc.textContent = `주제 구애 없이 하루 일과, 취미, 생각을 선택한 레벨의 쉬운/자연스러운 영어로 자유롭게 나눠보세요!`;
+          if (freeTalkBadge) { freeTalkBadge.textContent = '자유 레벨'; freeTalkBadge.className = 'scenario-card-lvl-badge lvl-4'; }
+          if (freeTalkTitle) freeTalkTitle.textContent = `알렉스와 자유 프리토킹`;
+          if (freeTalkDesc) freeTalkDesc.textContent = `주제 제한 없이 일상, 취미, 생각을 나에게 맞는 레벨의 영어로 자유롭게 나눠보세요.`;
         } else {
           const info = this.rolePlayEngine.levelGuides[level] || this.rolePlayEngine.levelGuides[1];
           if (bannerText) bannerText.innerHTML = `${info.title} · ${info.desc}`;
@@ -6141,8 +6198,8 @@ Respond in ONLY pure valid JSON:
             freeTalkBadge.textContent = `LEVEL ${level} 맞춤`;
             freeTalkBadge.className = `scenario-card-lvl-badge lvl-${level}`;
           }
-          if (freeTalkTitle) freeTalkTitle.textContent = `알렉스와 자유 프리토킹 (LEVEL ${level} 맞춤 대화)`;
-          if (freeTalkDesc) freeTalkDesc.textContent = `선택하신 LEVEL ${level}에 꼭 맞춘 어휘와 ${info.voiceRate}x 발음 속도로 부담 없이 자유롭게 대화해요!`;
+          if (freeTalkTitle) freeTalkTitle.textContent = `알렉스와 자유 프리토킹`;
+          if (freeTalkDesc) freeTalkDesc.textContent = `선택하신 LEVEL ${level} 난이도와 ${info.voiceRate}x 발음 속도로 부담 없이 자연스럽게 대화해요!`;
         }
 
         this.renderModalScenarios(level);
